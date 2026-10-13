@@ -1,0 +1,435 @@
+/* =========================================================
+   CAPYLEARN V2 — GLOBAL EXPERIENCE LAYER
+   Non-destructive visual upgrade loaded after page CSS.
+========================================================= */
+
+:root {
+  --v2-glass: rgba(255,255,255,.72);
+  --v2-glass-strong: rgba(255,255,255,.88);
+  --v2-line: rgba(74,66,145,.10);
+  --v2-deep: #1f2842;
+  --v2-shadow: 0 24px 70px rgba(67,57,128,.14);
+  --v2-shadow-hover: 0 34px 90px rgba(67,57,128,.22);
+  --v2-ease: cubic-bezier(.2,.8,.2,1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(123,110,246,.09), transparent 26rem),
+    radial-gradient(circle at 90% 22%, rgba(103,200,255,.10), transparent 28rem),
+    linear-gradient(180deg,#fffdf9 0%,#fff 40%,#fbfbff 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  opacity: .55;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(123,110,246,.13) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 80% 70%, rgba(103,200,255,.13) 0 1px, transparent 1.4px);
+  background-size: 34px 34px, 42px 42px;
+  mask-image: linear-gradient(to bottom,black,transparent 88%);
+}
+
+/* Cursor-reactive ambient light */
+.v2-spotlight {
+  position: fixed;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  transform: translate(-50%,-50%);
+  background: radial-gradient(circle,rgba(123,110,246,.095),rgba(103,200,255,.045) 38%,transparent 68%);
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+body.v2-pointer .v2-spotlight { opacity: 1; }
+
+/* Header / navigation */
+.header {
+  transition: transform .35s var(--v2-ease), background .35s ease, box-shadow .35s ease !important;
+}
+.header .navbar {
+  position: relative;
+  border: 1px solid transparent;
+  transition: all .35s var(--v2-ease);
+}
+.header.scrolled .navbar,
+body.v2-scrolled .header .navbar {
+  border-color: rgba(255,255,255,.72);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 18px 55px rgba(46,40,92,.10);
+  backdrop-filter: blur(18px) saturate(145%);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
+}
+
+.nav-link {
+  position: relative;
+  transition: color .25s ease, transform .25s ease !important;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,var(--purple),var(--blue));
+  transform: translateX(-50%);
+  transition: width .28s var(--v2-ease);
+}
+.nav-link:hover { transform: translateY(-2px); }
+.nav-link:hover::after,
+.nav-link.active::after { width: 22px; }
+
+.brand-icon,
+.star-counter,
+.nav-button,
+.primary-button,
+.secondary-button,
+button {
+  transform: translateZ(0);
+}
+
+.star-counter {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(255,196,64,.12);
+}
+.star-counter::after {
+  content: "";
+  position: absolute;
+  inset: -60% -30%;
+  background: linear-gradient(100deg,transparent 30%,rgba(255,255,255,.85),transparent 70%);
+  transform: translateX(-100%) rotate(10deg);
+  animation: v2Shimmer 5.8s ease-in-out infinite;
+}
+@keyframes v2Shimmer { 0%,76%{transform:translateX(-110%) rotate(10deg)} 100%{transform:translateX(110%) rotate(10deg)} }
+
+/* Universal sections */
+section { position: relative; }
+
+.v2-reveal {
+  opacity: 0;
+  transform: translateY(26px) scale(.985);
+  filter: blur(5px);
+  transition: opacity .8s var(--v2-ease), transform .8s var(--v2-ease), filter .8s ease;
+  transition-delay: var(--v2-delay,0ms);
+}
+.v2-reveal.v2-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.v2-float {
+  animation: v2Float 5s ease-in-out infinite;
+  animation-delay: var(--v2-float-delay,0s);
+}
+@keyframes v2Float { 50% { transform: translateY(-9px) rotate(.3deg); } }
+
+/* Hero atmosphere by page */
+body[data-v2-page="home"] .hero,
+body[data-v2-page="learn"] .learn-hero,
+body[data-v2-page="practice"] .practice-hero,
+body[data-v2-page="games"] .games-hero,
+body[data-v2-page="progress"] .progress-hero,
+body[data-v2-page="creator"] .creator-hero,
+body[data-v2-page="animals"] .animal-hero,
+body[data-v2-page="fruits"] .fruit-hero,
+body[data-v2-page="plants"] .plant-hero,
+body[data-v2-page="colors"] .color-hero,
+body[data-v2-page="numbers"] .number-hero {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+body[data-v2-page] main::before,
+body[data-v2-page="home"] .hero::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  top: 70px;
+  right: -170px;
+  border-radius: 50%;
+  background: radial-gradient(circle,rgba(123,110,246,.16),transparent 70%);
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* World-specific ambient identity */
+body[data-v2-page="animals"] { --v2-world-a:#7b6ef6; --v2-world-b:#67c8ff; }
+body[data-v2-page="fruits"]  { --v2-world-a:#ff9a84; --v2-world-b:#ffd76a; }
+body[data-v2-page="plants"]  { --v2-world-a:#55c995; --v2-world-b:#9ce8bb; }
+body[data-v2-page="colors"]  { --v2-world-a:#7b6ef6; --v2-world-b:#ff9a84; }
+body[data-v2-page="numbers"] { --v2-world-a:#67c8ff; --v2-world-b:#7b6ef6; }
+
+body[data-v2-page="animals"] .animal-hero,
+body[data-v2-page="fruits"] .fruit-hero,
+body[data-v2-page="plants"] .plant-hero,
+body[data-v2-page="colors"] .color-hero,
+body[data-v2-page="numbers"] .number-hero {
+  background-image:
+    radial-gradient(circle at 15% 20%, color-mix(in srgb,var(--v2-world-a) 18%,transparent), transparent 30%),
+    radial-gradient(circle at 85% 65%, color-mix(in srgb,var(--v2-world-b) 18%,transparent), transparent 30%);
+}
+
+/* Premium card treatment. Keep selectors broad but safe. */
+[class*="card"],
+.world-card,
+.category-card,
+.game-card,
+.badge-card,
+.stat-card,
+.progress-card {
+  transition: transform .34s var(--v2-ease), box-shadow .34s ease, border-color .34s ease !important;
+}
+
+.v2-card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.v2-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(360px circle at var(--v2-x,50%) var(--v2-y,50%),rgba(255,255,255,.8),transparent 42%);
+  transition: opacity .3s ease;
+  z-index: 0;
+}
+.v2-card:hover::before { opacity: .5; }
+.v2-card:hover {
+  box-shadow: var(--v2-shadow-hover) !important;
+  border-color: rgba(123,110,246,.16) !important;
+}
+.v2-card > * { position: relative; z-index: 1; }
+
+/* Buttons */
+.primary-button,
+.secondary-button,
+.nav-button,
+.instagram-button,
+[class*="button"] {
+  transition: transform .28s var(--v2-ease), box-shadow .28s ease, filter .28s ease !important;
+}
+.primary-button:hover,
+.nav-button:hover {
+  box-shadow: 0 16px 34px rgba(123,110,246,.25) !important;
+  filter: saturate(1.06);
+}
+.v2-magnetic { will-change: transform; }
+
+/* Decorative particles */
+.v2-particle-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.v2-particle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: var(--c);
+  opacity: .34;
+  box-shadow: 0 0 22px var(--c);
+  animation: v2Particle var(--d) ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+}
+@keyframes v2Particle {
+  to { transform: translate3d(var(--dx),-24px,0) scale(1.25); opacity:.12; }
+}
+
+/* Progress bars feel alive without changing their actual width logic */
+[class*="progress"] [class*="bar"],
+[class*="progress"] [class*="fill"],
+.progress-fill,
+.progress-bar-fill {
+  position: relative;
+  overflow: hidden;
+}
+[class*="progress"] [class*="bar"]::after,
+[class*="progress"] [class*="fill"]::after,
+.progress-fill::after,
+.progress-bar-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg,transparent,rgba(255,255,255,.42),transparent);
+  animation: v2ProgressSweep 3.8s ease-in-out infinite;
+}
+@keyframes v2ProgressSweep { 0%,55%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
+
+/* Game page: stronger arcade polish */
+body[data-v2-page="games"] .game-card,
+body[data-v2-page="games"] [class*="game-card"] {
+  isolation: isolate;
+}
+body[data-v2-page="games"] .game-card::after,
+body[data-v2-page="games"] [class*="game-card"]::after {
+  content:"";
+  position:absolute;
+  inset:auto 8% -42% 8%;
+  height:120px;
+  border-radius:50%;
+  background:rgba(123,110,246,.15);
+  filter:blur(24px);
+  z-index:-1;
+}
+
+/* Creator editorial treatment */
+body[data-v2-page="creator"] .creator-portrait-card {
+  box-shadow: 0 45px 120px rgba(60,52,120,.20) !important;
+}
+body[data-v2-page="creator"] .dedication-shell {
+  position: relative;
+}
+body[data-v2-page="creator"] .dedication-shell::after {
+  content:"For Cyra ♥";
+  position:absolute;
+  right:34px;
+  bottom:24px;
+  font-family:"Fredoka",sans-serif;
+  font-weight:700;
+  font-size:11px;
+  color:rgba(92,78,231,.34);
+  letter-spacing:.4px;
+}
+
+/* Page transition veil */
+.v2-page-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  background: linear-gradient(135deg,#f7f3ff,#edf8ff,#fffdf7);
+  transform: translateY(-100%);
+}
+body.v2-enter .v2-page-veil {
+  animation: v2Enter .72s var(--v2-ease) both;
+}
+body.v2-leave .v2-page-veil {
+  pointer-events: auto;
+  animation: v2Leave .42s var(--v2-ease) both;
+}
+@keyframes v2Enter { 0%{transform:translateY(0)} 100%{transform:translateY(-100%)} }
+@keyframes v2Leave { 0%{transform:translateY(100%)} 100%{transform:translateY(0)} }
+
+/* Toast */
+.v2-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 100000;
+  transform: translate(-50%,18px) scale(.96);
+  opacity: 0;
+  padding: 12px 17px;
+  border: 1px solid rgba(255,255,255,.75);
+  border-radius: 999px;
+  background: rgba(32,38,64,.90);
+  color: white;
+  box-shadow: 0 18px 50px rgba(31,40,66,.24);
+  backdrop-filter: blur(16px);
+  font: 800 11px/1 Nunito,sans-serif;
+  transition: all .32s var(--v2-ease);
+  pointer-events:none;
+}
+.v2-toast.show { opacity:1; transform:translate(-50%,0) scale(1); }
+
+@media (max-width: 900px) {
+  .header .navbar { backdrop-filter: blur(14px); }
+  .v2-spotlight { display:none; }
+  .v2-card:hover { transform:none !important; }
+}
+
+@media (max-width: 720px) {
+  body { background-size:auto; }
+  .nav-menu.open {
+    background: rgba(255,255,255,.94) !important;
+    border: 1px solid rgba(123,110,246,.10) !important;
+    box-shadow: 0 24px 60px rgba(48,42,100,.14) !important;
+    backdrop-filter: blur(18px);
+  }
+  .v2-reveal { transform: translateY(16px); filter: blur(2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after {
+    scroll-behavior:auto !important;
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .v2-reveal { opacity:1 !important; transform:none !important; filter:none !important; }
+  .v2-spotlight,.v2-particle-field { display:none !important; }
+}
+
+
+/* Hash-target safety: never leave anchored content hidden behind reveal layers. */
+section:target .reveal,
+section:target .v2-reveal,
+#about:target .reveal,
+#about:target .v2-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+#about { scroll-margin-top: 110px; }
+
+
+/* =========================================================
+   ABOUT HARD FIX
+   The About CTA is a navigation destination and must never
+   be hidden by scroll-reveal state, especially on file://.
+========================================================= */
+#about,
+#about .container,
+#about .cta-card,
+#about .cta-content,
+#about .cta-cappy,
+#about .cta-cappy img {
+  visibility: visible !important;
+}
+
+#about .cta-card {
+  display: grid !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+#about .cta-card.reveal,
+#about .cta-card.v2-reveal,
+#about .cta-card.reveal.v2-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+#about .cta-content,
+#about .cta-cappy {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}

@@ -1,0 +1,19 @@
+CAPYLEARN V3 PROFILE PROGRESS FIX
+=================================
+
+Fixed:
+- Changing learner name no longer resets any progress.
+- Changing avatar no longer resets any progress.
+- Stars remain unchanged.
+- XP remains based on the same learned/practice/game data.
+- Learned words remain unchanged.
+- Practice and game scores remain unchanged.
+- Daily Missions remain unchanged.
+- Achievements remain unchanged.
+- Continue Learning remains unchanged.
+
+The profile save routine now changes ONLY:
+- capylearnV3Profile
+- capylearnV3OnboardingDone
+
+No legacy progress key is overwritten.

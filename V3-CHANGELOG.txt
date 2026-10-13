@@ -1,0 +1,40 @@
+CAPYLEARN V3 — ENGAGEMENT SYSTEM
+==================================
+
+Added:
+- First-run Cappy onboarding (learner name + avatar).
+- Persistent learner profile using new capylearnV3* localStorage keys.
+- XP + level system derived from existing learning/practice/game progress.
+- Daily Missions:
+  • Learn 3 new words
+  • Do 1 practice
+  • Play 1 game
+  • +75 XP reward (does NOT alter the global star formula).
+- Home + Progress engagement dashboard.
+- Continue Learning remembers the latest visited learning world.
+- Cappy reaction toasts.
+- Achievement unlock modal + lightweight confetti.
+- Sound ON/OFF control using Web Audio tones; default OFF.
+- Parent / Legacy Mode on Creator page linked to the Cyra dedication.
+- Mobile-responsive engagement UI.
+- prefers-reduced-motion support.
+- Keyboard Escape / backdrop close for modal dialogs.
+
+Preserved:
+- Existing global star formula and all existing star values.
+- Existing vocabulary, practice, games, progress, Creator, About, and Cyra content.
+- All pre-existing localStorage keys and scoring logic.
+- file:// local usage; no build step required.
+
+New files:
+- engagement.css
+- engagement.js
+
+New localStorage keys are namespaced:
+- capylearnV3Profile
+- capylearnV3Daily
+- capylearnV3DailyXP
+- capylearnV3Achievements
+- capylearnV3Sound
+- capylearnV3LastWorld
+- capylearnV3OnboardingDone

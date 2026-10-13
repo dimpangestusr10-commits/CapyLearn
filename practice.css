@@ -1,0 +1,2014 @@
+/* ==========================================================
+   CAPYLEARN
+   PRACTICE CENTER — FINAL CSS
+========================================================== */
+
+
+/* ======================================================
+   PAGE
+====================================================== */
+
+.practice-page {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.practice-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        75px 0 100px;
+}
+
+
+.practice-hero-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+.practice-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.practice-badge {
+
+    width: fit-content;
+
+    padding:
+        9px 14px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--purple-soft);
+
+    color:
+        var(--purple-dark);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.practice-hero h1 {
+
+    max-width: 700px;
+
+    margin-top: 20px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(
+            52px,
+            6.4vw,
+            82px
+        );
+
+    line-height: .97;
+
+    letter-spacing:
+        -3px;
+}
+
+
+.practice-hero h1 span {
+
+    color:
+        var(--purple);
+}
+
+
+.practice-hero-content > p {
+
+    max-width: 610px;
+
+    margin-top: 24px;
+
+    color:
+        var(--text-soft);
+
+    font-size: 17px;
+
+    line-height: 1.75;
+}
+
+
+.practice-hero-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* ======================================================
+   HERO STATS
+====================================================== */
+
+.practice-hero-stats {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 11px;
+
+    margin-top: 30px;
+}
+
+
+.practice-hero-stats > div {
+
+    display: grid;
+
+    grid-template-columns:
+        38px auto;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 145px;
+
+    padding:
+        11px 13px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        var(--shadow-soft);
+}
+
+
+.practice-hero-stats span {
+
+    grid-row:
+        1 / 3;
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--purple-soft);
+
+    font-size: 19px;
+}
+
+
+.practice-hero-stats
+> div:nth-child(2)
+span {
+
+    background:
+        var(--yellow-soft);
+}
+
+
+.practice-hero-stats
+> div:nth-child(3)
+span {
+
+    background:
+        var(--green-soft);
+}
+
+
+.practice-hero-stats strong {
+
+    font-size: 10px;
+}
+
+
+.practice-hero-stats small {
+
+    color:
+        var(--text-soft);
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+
+/* ======================================================
+   HERO VISUAL
+====================================================== */
+
+.practice-hero-visual {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: grid;
+
+    place-items: center;
+}
+
+
+.practice-hero-blob {
+
+    position: absolute;
+
+    width: 470px;
+
+    max-width: 93%;
+
+    aspect-ratio: 1;
+
+    border-radius:
+        45% 55% 58% 42%
+        / 52% 44% 56% 48%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #7b6ef6,
+            #67c8ff 52%,
+            #78e1b0
+        );
+
+    box-shadow:
+        0 38px 90px
+        rgba(85,75,185,.22);
+
+    animation:
+        practiceBlob
+        10s ease-in-out
+        infinite;
+}
+
+
+@keyframes practiceBlob {
+
+    50% {
+
+        border-radius:
+            58% 42% 44% 56%
+            / 44% 61% 39% 56%;
+
+        transform:
+            rotate(6deg)
+            scale(1.03);
+    }
+
+}
+
+
+.practice-cappy {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 370px;
+
+    max-width: 74%;
+
+    filter:
+        drop-shadow(
+            0 30px 30px
+            rgba(50,45,120,.22)
+        );
+
+    animation:
+        practiceCappy
+        4s ease-in-out
+        infinite;
+}
+
+
+@keyframes practiceCappy {
+
+    50% {
+
+        transform:
+            translateY(-13px);
+    }
+
+}
+
+
+.hero-float {
+
+    position: absolute;
+
+    z-index: 7;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        9px 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.85);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,.92);
+
+    box-shadow:
+        0 16px 35px
+        rgba(55,50,100,.14);
+
+    font-size: 24px;
+
+    animation:
+        practiceFloat
+        4s ease-in-out
+        infinite;
+}
+
+
+.hero-float span {
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.float-one {
+
+    left: 0;
+
+    top: 95px;
+}
+
+
+.float-two {
+
+    right: 0;
+
+    top: 165px;
+
+    animation-delay:
+        -1.3s;
+}
+
+
+.float-three {
+
+    left: 20px;
+
+    bottom: 85px;
+
+    animation-delay:
+        -2.2s;
+}
+
+
+@keyframes practiceFloat {
+
+    50% {
+
+        transform:
+            translateY(-9px);
+    }
+
+}
+
+
+.practice-talk {
+
+    position: absolute;
+
+    z-index: 8;
+
+    right: 5px;
+
+    bottom: 75px;
+
+    width: 145px;
+
+    padding:
+        12px 14px;
+
+    border-radius:
+        18px 18px 5px 18px;
+
+    background:
+        white;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    color:
+        var(--text-soft);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+.practice-talk strong {
+
+    display: block;
+
+    color:
+        var(--purple-dark);
+
+    font-size: 11px;
+}
+
+
+/* ======================================================
+   OVERALL PROGRESS
+====================================================== */
+
+.practice-progress-section {
+
+    position: relative;
+
+    z-index: 9;
+
+    margin-top: -35px;
+}
+
+
+.practice-progress-card {
+
+    display: grid;
+
+    grid-template-columns:
+        220px 1fr 65px;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding:
+        21px 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    box-shadow:
+        var(--shadow);
+
+    backdrop-filter:
+        blur(18px);
+}
+
+
+.practice-progress-card small {
+
+    color:
+        var(--purple-dark);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .8px;
+}
+
+
+.practice-progress-card h3 {
+
+    margin-top: 4px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 15px;
+}
+
+
+.practice-progress-card
+> strong {
+
+    text-align: right;
+
+    color:
+        var(--purple-dark);
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 21px;
+}
+
+
+.practice-progress-line {
+
+    height: 11px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background:
+        #ecebf3;
+}
+
+
+.practice-progress-line span {
+
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--blue),
+            var(--green)
+        );
+
+    transition:
+        width .5s ease;
+}
+
+
+/* ======================================================
+   SECTION HEADING
+====================================================== */
+
+.practice-section-heading {
+
+    max-width: 690px;
+
+    margin-bottom: 46px;
+}
+
+
+.practice-section-heading.center {
+
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+
+.practice-section-heading h2 {
+
+    margin-top: 14px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(
+            39px,
+            5vw,
+            58px
+        );
+
+    line-height: 1.02;
+
+    letter-spacing:
+        -2px;
+}
+
+
+.practice-section-heading p {
+
+    margin-top: 14px;
+
+    color:
+        var(--text-soft);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ======================================================
+   CATEGORY PRACTICE
+====================================================== */
+
+.practice-categories {
+
+    padding:
+        120px 0 110px;
+}
+
+
+.practice-world-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 20px;
+}
+
+
+.practice-world-card {
+
+    --world-color:
+        var(--purple);
+
+    --world-soft:
+        var(--purple-soft);
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 210px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 19px;
+
+    padding: 25px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 28px;
+
+    background:
+        white;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    transition:
+        .3s ease;
+}
+
+
+.practice-world-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.practice-world-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -90px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background:
+        var(--world-soft);
+}
+
+
+.animals-card {
+
+    --world-color:
+        #dba51d;
+
+    --world-soft:
+        #fff3c8;
+}
+
+
+.fruits-card {
+
+    --world-color:
+        #f27864;
+
+    --world-soft:
+        #ffebe6;
+}
+
+
+.plants-card {
+
+    --world-color:
+        #4eaf7b;
+
+    --world-soft:
+        #e4f8ec;
+}
+
+
+.colors-card {
+
+    --world-color:
+        #7466ef;
+
+    --world-soft:
+        #ece9ff;
+}
+
+
+.numbers-card {
+
+    --world-color:
+        #4aaee4;
+
+    --world-soft:
+        #e1f5ff;
+
+    grid-column:
+        1 / -1;
+}
+
+
+.practice-world-icon {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 90px;
+    height: 90px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 25px;
+
+    background:
+        var(--world-soft);
+
+    font-size: 47px;
+}
+
+
+.practice-world-copy {
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.practice-world-copy
+> span {
+
+    color:
+        var(--world-color);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .8px;
+}
+
+
+.practice-world-copy h3 {
+
+    margin-top: 5px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 27px;
+
+    color:
+        var(--text);
+}
+
+
+.practice-world-copy p {
+
+    margin-top: 3px;
+
+    color:
+        var(--text-soft);
+
+    font-size: 10px;
+}
+
+
+.practice-arrow {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background:
+        var(--world-color);
+
+    color:
+        white;
+
+    font-size: 20px;
+}
+
+
+/* MINI PROGRESS */
+
+.mini-progress {
+
+    max-width: 270px;
+
+    margin-top: 15px;
+}
+
+
+.mini-progress > div:first-child {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom: 6px;
+}
+
+
+.mini-progress small {
+
+    color:
+        var(--text-soft);
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+
+.mini-progress strong {
+
+    color:
+        var(--world-color);
+
+    font-size: 8px;
+}
+
+
+.mini-progress-line {
+
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background:
+        #eeedf4;
+}
+
+
+.mini-progress-line span {
+
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        var(--world-color);
+
+    transition:
+        width .5s ease;
+}
+
+
+/* ======================================================
+   MIXED PRACTICE
+====================================================== */
+
+.mixed-practice-section {
+
+    position: relative;
+
+    padding:
+        110px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(238,234,255,.46),
+            rgba(230,247,255,.42),
+            transparent
+        );
+}
+
+
+.mixed-practice-card {
+
+    max-width: 850px;
+
+    min-height: 520px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-inline: auto;
+
+    padding: 42px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 38px;
+
+    background:
+        white;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* START */
+
+.mixed-start {
+
+    max-width: 520px;
+
+    text-align: center;
+}
+
+
+.mixed-start-icon {
+
+    width: 100px;
+    height: 100px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-inline: auto;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--purple-soft),
+            var(--blue-soft)
+        );
+
+    font-size: 50px;
+}
+
+
+.mixed-start > span,
+.mixed-result > span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    color:
+        var(--purple-dark);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.mixed-start h3,
+.mixed-result h3 {
+
+    margin-top: 7px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 34px;
+}
+
+
+.mixed-start p,
+.mixed-result p {
+
+    margin-top: 7px;
+
+    color:
+        var(--text-soft);
+
+    font-size: 12px;
+}
+
+
+.mixed-world-icons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 22px;
+}
+
+
+.mixed-world-icons span {
+
+    width: 47px;
+    height: 47px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    background:
+        #faf9fd;
+
+    font-size: 24px;
+}
+
+
+.start-mixed-button {
+
+    min-height: 51px;
+
+    margin-top: 27px;
+
+    padding:
+        0 21px;
+
+    border: 0;
+
+    border-radius: 15px;
+
+    background:
+        var(--purple);
+
+    color:
+        white;
+
+    cursor: pointer;
+
+    font-family:
+        "Nunito",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    transition: .25s ease;
+}
+
+
+.start-mixed-button:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* GAME */
+
+.mixed-game {
+
+    width: 100%;
+}
+
+
+.mixed-game-top {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+}
+
+
+.mixed-game-top
+> div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.mixed-game-top small {
+
+    color:
+        var(--text-soft);
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+
+.mixed-game-top strong {
+
+    margin-top: 2px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+.mixed-score {
+
+    min-width: 70px;
+
+    padding:
+        10px 13px;
+
+    border-radius: 14px;
+
+    background:
+        var(--yellow-soft);
+
+    text-align: center;
+}
+
+
+.mixed-category {
+
+    width: fit-content;
+
+    margin:
+        38px auto 0;
+
+    padding:
+        8px 13px;
+
+    border-radius: 999px;
+
+    background:
+        var(--purple-soft);
+
+    color:
+        var(--purple-dark);
+
+    font-size: 9px;
+
+    font-weight: 900;
+}
+
+
+.mixed-question {
+
+    max-width: 620px;
+
+    margin:
+        18px auto 0;
+
+    text-align: center;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(
+            25px,
+            4vw,
+            37px
+        );
+
+    line-height: 1.2;
+}
+
+
+.mixed-speaker {
+
+    min-height: 40px;
+
+    display: block;
+
+    margin:
+        15px auto 0;
+
+    padding:
+        0 14px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background:
+        var(--blue-soft);
+
+    color:
+        #347fa8;
+
+    cursor: pointer;
+
+    font-family:
+        "Nunito",
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 900;
+}
+
+
+.mixed-options {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 12px;
+
+    max-width: 650px;
+
+    margin:
+        30px auto 0;
+}
+
+
+.mixed-option {
+
+    min-height: 58px;
+
+    padding:
+        10px 15px;
+
+    border:
+        2px solid
+        transparent;
+
+    border-radius: 17px;
+
+    background:
+        #f8f7fb;
+
+    color:
+        var(--text);
+
+    cursor: pointer;
+
+    font-family:
+        "Nunito",
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    transition: .2s ease;
+}
+
+
+.mixed-option:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--purple-soft);
+}
+
+
+.mixed-option.correct {
+
+    border-color:
+        #58c98e;
+
+    background:
+        var(--green-soft);
+
+    color:
+        #257550;
+}
+
+
+.mixed-option.wrong {
+
+    border-color:
+        var(--pink);
+
+    background:
+        var(--pink-soft);
+
+    color:
+        #bd5b4e;
+}
+
+
+.mixed-feedback {
+
+    min-height: 28px;
+
+    margin-top: 21px;
+
+    text-align: center;
+
+    color:
+        var(--text-soft);
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+/* RESULT */
+
+.mixed-result {
+
+    max-width: 530px;
+
+    text-align: center;
+}
+
+
+.mixed-result-icon {
+
+    font-size: 80px;
+}
+
+
+.mixed-result
+> strong {
+
+    display: block;
+
+    margin-top: 13px;
+
+    color:
+        var(--purple-dark);
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 42px;
+}
+
+
+.mixed-result-message {
+
+    margin-top: 13px;
+
+    color:
+        var(--text-soft);
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.mixed-result-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.mixed-result-actions button,
+.mixed-result-actions a {
+
+    min-height: 47px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        0 17px;
+
+    border: 0;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-family:
+        "Nunito",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 900;
+}
+
+
+.mixed-result-actions button {
+
+    background:
+        var(--purple);
+
+    color:
+        white;
+}
+
+
+.mixed-result-actions a {
+
+    background:
+        var(--purple-soft);
+
+    color:
+        var(--purple-dark);
+}
+
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* ======================================================
+   TIPS
+====================================================== */
+
+.practice-tips-section {
+
+    padding:
+        10px 0 110px;
+}
+
+
+.practice-tips-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns:
+        .65fr 1.35fr;
+
+    align-items: center;
+
+    gap: 40px;
+
+    min-height: 380px;
+
+    padding:
+        40px 55px;
+
+    border-radius: 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2b3551,
+            #263047
+        );
+
+    color:
+        white;
+
+    box-shadow:
+        0 30px 70px
+        rgba(35,42,70,.18);
+}
+
+
+.practice-tips-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 370px;
+    height: 370px;
+
+    left: -160px;
+    top: -160px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(123,110,246,.16);
+}
+
+
+.practice-tip-cappy {
+
+    position: relative;
+
+    z-index: 4;
+
+    min-height: 300px;
+
+    display: grid;
+
+    place-items: center;
+}
+
+
+.practice-tip-cappy img {
+
+    width: 255px;
+
+    max-width: 100%;
+
+    filter:
+        drop-shadow(
+            0 25px 24px
+            rgba(0,0,0,.16)
+        );
+}
+
+
+.practice-tips-copy {
+
+    position: relative;
+
+    z-index: 4;
+}
+
+
+.practice-tips-copy
+> span {
+
+    color:
+        #dad5ff;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.practice-tips-copy h2 {
+
+    margin-top: 9px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(
+            37px,
+            5vw,
+            56px
+        );
+
+    line-height: 1.02;
+}
+
+
+.practice-tips-copy p {
+
+    max-width: 620px;
+
+    margin-top: 15px;
+
+    color:
+        rgba(255,255,255,.66);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+.practice-tips-copy
+.primary-button {
+
+    margin-top: 23px;
+
+    background:
+        white;
+
+    color:
+        var(--purple-dark);
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media
+(max-width: 1000px) {
+
+
+    .practice-hero-grid {
+
+        grid-template-columns:
+            1fr;
+
+        text-align: center;
+    }
+
+
+    .practice-badge {
+
+        margin-inline: auto;
+    }
+
+
+    .practice-hero-content > p {
+
+        margin-inline: auto;
+    }
+
+
+    .practice-hero-actions,
+    .practice-hero-stats {
+
+        justify-content: center;
+    }
+
+
+    .practice-world-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .numbers-card {
+
+        grid-column:
+            auto;
+    }
+
+
+    .practice-tips-card {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .practice-tip-cappy {
+
+        min-height: 250px;
+    }
+
+
+    .practice-tips-copy {
+
+        text-align: center;
+    }
+
+
+    .practice-tips-copy p {
+
+        margin-inline: auto;
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media
+(max-width: 760px) {
+
+
+    .practice-hero {
+
+        padding:
+            50px 0 75px;
+    }
+
+
+    .practice-hero h1 {
+
+        font-size:
+            clamp(
+                47px,
+                14vw,
+                68px
+            );
+    }
+
+
+    .practice-hero-content > p {
+
+        font-size: 15px;
+    }
+
+
+    .practice-hero-actions {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        max-width: 390px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .practice-hero-stats {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .practice-hero-visual {
+
+        min-height: 430px;
+    }
+
+
+    .practice-hero-blob {
+
+        width: 360px;
+    }
+
+
+    .practice-cappy {
+
+        max-width: 68%;
+    }
+
+
+    .practice-talk {
+
+        right: 0;
+
+        bottom: 35px;
+    }
+
+
+    .hero-float {
+
+        font-size: 19px;
+    }
+
+
+    .practice-progress-section {
+
+        margin-top: -15px;
+    }
+
+
+    .practice-progress-card {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 11px;
+    }
+
+
+    .practice-progress-card
+    > strong {
+
+        text-align: left;
+    }
+
+
+    .practice-categories {
+
+        padding-top: 95px;
+    }
+
+
+    .practice-world-card {
+
+        grid-template-columns:
+            auto 1fr;
+
+        padding: 20px;
+    }
+
+
+    .practice-world-icon {
+
+        width: 72px;
+
+        height: 72px;
+
+        border-radius: 20px;
+
+        font-size: 38px;
+    }
+
+
+    .practice-arrow {
+
+        display: none;
+    }
+
+
+    .mixed-practice-card {
+
+        min-height: 500px;
+
+        padding:
+            30px 20px;
+
+        border-radius: 30px;
+    }
+
+
+    .mixed-options {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .practice-tips-card {
+
+        padding:
+            25px 22px;
+
+        border-radius: 30px;
+    }
+
+}
+
+
+/* ======================================================
+   SMALL MOBILE
+====================================================== */
+
+@media
+(max-width: 480px) {
+
+
+    .practice-hero-visual {
+
+        min-height: 370px;
+    }
+
+
+    .practice-hero-blob {
+
+        width: 305px;
+    }
+
+
+    .float-one {
+
+        left: -2px;
+    }
+
+
+    .float-two {
+
+        right: -2px;
+    }
+
+
+    .float-three {
+
+        left: 0;
+    }
+
+
+    .practice-world-card {
+
+        grid-template-columns:
+            1fr;
+
+        text-align: center;
+    }
+
+
+    .practice-world-icon {
+
+        margin-inline: auto;
+    }
+
+
+    .mini-progress {
+
+        margin-inline: auto;
+    }
+
+
+    .mixed-world-icons {
+
+        gap: 5px;
+    }
+
+
+    .mixed-world-icons span {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 20px;
+    }
+
+}

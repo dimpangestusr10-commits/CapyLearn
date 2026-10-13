@@ -1,0 +1,2834 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Progress — CapyLearn</title>
+
+    <meta
+        name="description"
+        content="Lihat progress belajar, stars, quiz score, game score dan pencapaian CapyLearn."
+    >
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- GLOBAL CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- PROGRESS CSS -->
+
+    <link
+        rel="stylesheet"
+        href="progress.css"
+    >
+
+    <link rel="stylesheet" href="v2.css">
+
+
+    <link rel="stylesheet" href="engagement.css">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#7B6EF6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="CapyLearn">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+    <link rel="stylesheet" href="profiles-v4.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================================
+         BACKGROUND
+    ========================================================== -->
+
+    <div class="page-bg">
+
+        <span class="bg-blob blob-one"></span>
+
+        <span class="bg-blob blob-two"></span>
+
+        <span class="bg-blob blob-three"></span>
+
+    </div>
+
+
+
+    <!-- ==========================================================
+         HEADER
+    ========================================================== -->
+
+    <header
+        class="header"
+        id="header"
+    >
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- BRAND -->
+
+                <a
+                    href="index.html"
+                    class="brand"
+                >
+
+                    <div class="brand-icon">
+
+                        <span>
+                            C
+                        </span>
+
+                    </div>
+
+
+                    <div class="brand-text">
+
+                        <strong>
+                            CapyLearn
+                        </strong>
+
+                        <small>
+                            Play • Learn • Speak!
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- NAV -->
+
+                <div
+                    class="nav-menu"
+                    id="navMenu"
+                >
+
+                    <a
+                        href="index.html"
+                        class="nav-link"
+                    >
+                        Home
+                    </a>
+
+
+                    <a
+                        href="learn.html"
+                        class="nav-link"
+                    >
+                        Learn
+                    </a>
+
+
+                    <a
+                        href="practice.html"
+                        class="nav-link"
+                    >
+                        Practice
+                    </a>
+
+
+                    <a
+                        href="games.html"
+                        class="nav-link"
+                    >
+                        Games
+                    </a>
+
+
+                    <a
+                        href="progress.html"
+                        class="nav-link active"
+                    >
+                        Progress
+                    </a>
+                    <a
+                        href="creator.html"
+                        class="nav-link"
+                    >
+                        Creator
+                    </a>
+
+
+
+                    <a
+                        href="about.html"
+                        class="nav-link"
+                    >
+                        About
+                    </a>
+
+                </div>
+
+
+
+                <!-- ACTION -->
+
+                <div class="nav-actions">
+
+
+                    <div class="star-counter">
+
+                        ⭐
+
+                        <span id="starCount">
+                            120
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#learningProgress"
+                        class="nav-button"
+                    >
+                        My Progress
+                    </a>
+
+
+                    <button
+                        class="menu-button"
+                        id="menuButton"
+                        type="button"
+                        aria-label="Buka menu"
+                    >
+                        ☰
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================================
+         MAIN
+    ========================================================== -->
+
+    <main class="progress-page">
+
+
+        <!-- ======================================================
+             HERO
+        ======================================================= -->
+
+        <section class="progress-hero">
+
+            <div class="container progress-hero-grid">
+
+
+                <!-- LEFT -->
+
+                <div class="progress-hero-content reveal">
+
+
+                    <div class="progress-hero-badge">
+
+                        🏆 MY LEARNING JOURNEY
+
+                    </div>
+
+
+
+                    <h1>
+
+                        Look how far
+
+                        <span>
+                            you've come!
+                        </span>
+
+                    </h1>
+
+
+
+                    <p>
+
+                        Lihat semua progress belajar, vocabulary
+                        yang sudah dikuasai, quiz terbaik,
+                        game score dan pencapaianmu bersama Cappy.
+
+                    </p>
+
+
+
+                    <div class="progress-hero-actions">
+
+
+                        <a
+                            href="#learningProgress"
+                            class="primary-button"
+                        >
+                            📊 View Progress
+                        </a>
+
+
+                        <a
+                            href="learn.html"
+                            class="secondary-button"
+                        >
+                            📚 Keep Learning
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="progress-hero-stats">
+
+
+                        <div>
+
+                            <span>
+                                📚
+                            </span>
+
+                            <strong id="heroLearned">
+                                0 / 50
+                            </strong>
+
+                            <small>
+                                Words Learned
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                ⭐
+                            </span>
+
+                            <strong id="heroStars">
+                                120
+                            </strong>
+
+                            <small>
+                                Total Stars
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                🏆
+                            </span>
+
+                            <strong id="heroBadges">
+                                0
+                            </strong>
+
+                            <small>
+                                Badges Earned
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="progress-hero-visual reveal">
+
+
+                    <div class="progress-hero-blob"></div>
+
+
+                    <div class="progress-float progress-float-one">
+
+                        ⭐
+
+                        <span>
+                            Stars
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-float progress-float-two">
+
+                        🏆
+
+                        <span>
+                            Badges
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-float progress-float-three">
+
+                        📚
+
+                        <span>
+                            Words
+                        </span>
+
+                    </div>
+
+
+                    <img
+                        src="assets/mascot/cappy.png"
+                        alt="Cappy melihat progress"
+                        class="progress-cappy"
+                    >
+
+
+                    <div class="progress-talk">
+
+                        Amazing work! 🎉
+
+                        <strong>
+                            Keep going!
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             OVERALL DASHBOARD
+        ======================================================= -->
+
+        <section class="overall-dashboard-section">
+
+            <div class="container">
+
+
+                <div class="overall-dashboard-card reveal">
+
+
+                    <div class="overall-dashboard-copy">
+
+
+                        <span>
+                            TOTAL LEARNING PROGRESS
+                        </span>
+
+
+                        <h2 id="overallTitle">
+                            Your adventure is just beginning!
+                        </h2>
+
+
+                        <p id="overallDescription">
+
+                            Mulai pelajari vocabulary dan
+                            progress kamu akan tampil di sini.
+
+                        </p>
+
+
+
+                        <div class="overall-dashboard-stats">
+
+
+                            <div>
+
+                                <strong id="overallLearned">
+                                    0
+                                </strong>
+
+                                <small>
+                                    Words Learned
+                                </small>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong id="overallRemaining">
+                                    50
+                                </strong>
+
+                                <small>
+                                    Words Remaining
+                                </small>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong id="overallCompletedWorlds">
+                                    0
+                                </strong>
+
+                                <small>
+                                    Worlds Completed
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="overall-ring-area">
+
+
+                        <div
+                            class="overall-progress-ring"
+                            id="overallProgressRing"
+                        >
+
+                            <div class="overall-ring-inner">
+
+                                <strong id="overallPercent">
+                                    0%
+                                </strong>
+
+                                <span>
+                                    Completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             LEARNING WORLD PROGRESS
+        ======================================================= -->
+
+        <section
+            class="learning-progress-section"
+            id="learningProgress"
+        >
+
+            <div class="container">
+
+
+                <div class="progress-section-heading reveal">
+
+                    <span class="section-badge">
+                        🌎 Learning Worlds
+                    </span>
+
+
+                    <h2>
+                        Your progress in every world.
+                    </h2>
+
+
+                    <p>
+
+                        Progress otomatis diambil dari vocabulary
+                        yang sudah kamu tandai sebagai Learned.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="world-progress-grid">
+
+
+                    <!-- ANIMALS -->
+
+                    <article class="progress-world-card animals-progress reveal">
+
+
+                        <div class="progress-world-top">
+
+
+                            <div class="progress-world-icon">
+
+                                🦁
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    WORLD 01
+                                </span>
+
+                                <h3>
+                                    Animals
+                                </h3>
+
+                            </div>
+
+
+                            <strong id="animalsPercent">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="progress-world-bar">
+
+                            <span id="animalsBar"></span>
+
+                        </div>
+
+
+
+                        <div class="progress-world-meta">
+
+
+                            <div>
+
+                                <small>
+                                    Learned
+                                </small>
+
+                                <strong id="animalsLearned">
+                                    0 / 10
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Best Quiz
+                                </small>
+
+                                <strong id="animalsQuiz">
+                                    0 / 5
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <a href="animals.html">
+                            Continue Animals →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- FRUITS -->
+
+                    <article class="progress-world-card fruits-progress reveal">
+
+
+                        <div class="progress-world-top">
+
+
+                            <div class="progress-world-icon">
+
+                                🍎
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    WORLD 02
+                                </span>
+
+                                <h3>
+                                    Fruits
+                                </h3>
+
+                            </div>
+
+
+                            <strong id="fruitsPercent">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="progress-world-bar">
+
+                            <span id="fruitsBar"></span>
+
+                        </div>
+
+
+
+                        <div class="progress-world-meta">
+
+
+                            <div>
+
+                                <small>
+                                    Learned
+                                </small>
+
+                                <strong id="fruitsLearned">
+                                    0 / 10
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Best Quiz
+                                </small>
+
+                                <strong id="fruitsQuiz">
+                                    0 / 5
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <a href="fruits.html">
+                            Continue Fruits →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- PLANTS -->
+
+                    <article class="progress-world-card plants-progress reveal">
+
+
+                        <div class="progress-world-top">
+
+
+                            <div class="progress-world-icon">
+
+                                🌱
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    WORLD 03
+                                </span>
+
+                                <h3>
+                                    Plants
+                                </h3>
+
+                            </div>
+
+
+                            <strong id="plantsPercent">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="progress-world-bar">
+
+                            <span id="plantsBar"></span>
+
+                        </div>
+
+
+
+                        <div class="progress-world-meta">
+
+
+                            <div>
+
+                                <small>
+                                    Learned
+                                </small>
+
+                                <strong id="plantsLearned">
+                                    0 / 10
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Best Quiz
+                                </small>
+
+                                <strong id="plantsQuiz">
+                                    0 / 5
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <a href="plants.html">
+                            Continue Plants →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- COLORS -->
+
+                    <article class="progress-world-card colors-progress reveal">
+
+
+                        <div class="progress-world-top">
+
+
+                            <div class="progress-world-icon">
+
+                                🎨
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    WORLD 04
+                                </span>
+
+                                <h3>
+                                    Colors
+                                </h3>
+
+                            </div>
+
+
+                            <strong id="colorsPercent">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="progress-world-bar">
+
+                            <span id="colorsBar"></span>
+
+                        </div>
+
+
+
+                        <div class="progress-world-meta">
+
+
+                            <div>
+
+                                <small>
+                                    Learned
+                                </small>
+
+                                <strong id="colorsLearned">
+                                    0 / 10
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Best Quiz
+                                </small>
+
+                                <strong id="colorsQuiz">
+                                    0 / 5
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <a href="colors.html">
+                            Continue Colors →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- NUMBERS -->
+
+                    <article class="progress-world-card numbers-progress reveal">
+
+
+                        <div class="progress-world-top">
+
+
+                            <div class="progress-world-icon">
+
+                                🔢
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    WORLD 05
+                                </span>
+
+                                <h3>
+                                    Numbers
+                                </h3>
+
+                            </div>
+
+
+                            <strong id="numbersPercent">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="progress-world-bar">
+
+                            <span id="numbersBar"></span>
+
+                        </div>
+
+
+
+                        <div class="progress-world-meta">
+
+
+                            <div>
+
+                                <small>
+                                    Learned
+                                </small>
+
+                                <strong id="numbersLearned">
+                                    0 / 10
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Best Quiz
+                                </small>
+
+                                <strong id="numbersQuiz">
+                                    0 / 5
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <a href="numbers.html">
+                            Continue Numbers →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             PERFORMANCE
+        ======================================================= -->
+
+        <section class="performance-section">
+
+            <div class="container">
+
+
+                <div class="progress-section-heading center reveal">
+
+                    <span class="section-badge">
+                        🎯 Practice & Games
+                    </span>
+
+
+                    <h2>
+                        Your best scores.
+                    </h2>
+
+
+                    <p>
+
+                        Semua nilai terbaik dari Practice dan
+                        Games tampil di sini.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="performance-grid">
+
+
+                    <!-- MIXED PRACTICE -->
+
+                    <div class="performance-card mixed-performance reveal">
+
+
+                        <div class="performance-icon">
+                            🎯
+                        </div>
+
+
+                        <span>
+                            MIXED PRACTICE
+                        </span>
+
+
+                        <h3>
+                            Best Practice
+                        </h3>
+
+
+                        <strong id="mixedPracticeBest">
+                            0 / 10
+                        </strong>
+
+
+                        <p>
+                            Best score from all learning worlds.
+                        </p>
+
+
+                        <a href="practice.html#mixedPractice">
+                            Practice Again →
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- PICTURE GUESS -->
+
+                    <div class="performance-card picture-performance reveal">
+
+
+                        <div class="performance-icon">
+                            🧩
+                        </div>
+
+
+                        <span>
+                            PICTURE GUESS
+                        </span>
+
+
+                        <h3>
+                            Best Score
+                        </h3>
+
+
+                        <strong id="pictureGameBest">
+                            0 / 10
+                        </strong>
+
+
+                        <p>
+                            Your highest Picture Guess score.
+                        </p>
+
+
+                        <a href="games.html#pictureGame">
+                            Play Again →
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- WORD MATCH -->
+
+                    <div class="performance-card match-performance reveal">
+
+
+                        <div class="performance-icon">
+                            🔗
+                        </div>
+
+
+                        <span>
+                            WORD MATCH
+                        </span>
+
+
+                        <h3>
+                            Best Match
+                        </h3>
+
+
+                        <strong id="wordMatchBest">
+                            0 / 5
+                        </strong>
+
+
+                        <p>
+                            Number of successfully matched pairs.
+                        </p>
+
+
+                        <a href="games.html#wordMatchGame">
+                            Play Again →
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- SPEED -->
+
+                    <div class="performance-card speed-performance reveal">
+
+
+                        <div class="performance-icon">
+                            ⚡
+                        </div>
+
+
+                        <span>
+                            SPEED CHALLENGE
+                        </span>
+
+
+                        <h3>
+                            Speed Record
+                        </h3>
+
+
+                        <strong id="speedGameBest">
+                            0
+                        </strong>
+
+
+                        <p>
+                            Correct answers within 30 seconds.
+                        </p>
+
+
+                        <a href="games.html#speedGame">
+                            Beat Record →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             BADGES
+        ======================================================= -->
+
+        <section class="badges-section">
+
+            <div class="container">
+
+
+                <div class="progress-section-heading reveal">
+
+                    <span class="section-badge">
+                        🏆 Achievements
+                    </span>
+
+
+                    <h2>
+                        Cappy's Badge Collection.
+                    </h2>
+
+
+                    <p>
+
+                        Badge akan terbuka otomatis saat kamu
+                        mencapai target tertentu.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="badge-grid">
+
+
+                    <!-- FIRST WORD -->
+
+                    <div
+                        class="achievement-badge locked reveal"
+                        id="badgeFirstWord"
+                    >
+
+                        <div class="badge-icon">
+                            🌟
+                        </div>
+
+
+                        <span>
+                            FIRST STEP
+                        </span>
+
+
+                        <h3>
+                            First Word
+                        </h3>
+
+
+                        <p>
+                            Learn your first word.
+                        </p>
+
+
+                        <small>
+                            🔒 Locked
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- 10 WORDS -->
+
+                    <div
+                        class="achievement-badge locked reveal"
+                        id="badgeTenWords"
+                    >
+
+                        <div class="badge-icon">
+                            📚
+                        </div>
+
+
+                        <span>
+                            WORD EXPLORER
+                        </span>
+
+
+                        <h3>
+                            10 Words
+                        </h3>
+
+
+                        <p>
+                            Learn 10 vocabulary words.
+                        </p>
+
+
+                        <small>
+                            🔒 Locked
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- 25 WORDS -->
+
+                    <div
+                        class="achievement-badge locked reveal"
+                        id="badgeHalfWay"
+                    >
+
+                        <div class="badge-icon">
+                            🚀
+                        </div>
+
+
+                        <span>
+                            HALF WAY
+                        </span>
+
+
+                        <h3>
+                            25 Words
+                        </h3>
+
+
+                        <p>
+                            Reach half of all vocabulary.
+                        </p>
+
+
+                        <small>
+                            🔒 Locked
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- 1 WORLD -->
+
+                    <div
+                        class="achievement-badge locked reveal"
+                        id="badgeWorld"
+                    >
+
+                        <div class="badge-icon">
+                            🌎
+                        </div>
+
+
+                        <span>
+                            WORLD MASTER
+                        </span>
+
+
+                        <h3>
+                            Complete a World
+                        </h3>
+
+
+                        <p>
+                            Learn all 10 words in one world.
+                        </p>
+
+
+                        <small>
+                            🔒 Locked
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- PERFECT QUIZ -->
+
+                    <div
+                        class="achievement-badge locked reveal"
+                        id="badgeQuiz"
+                    >
+
+                        <div class="badge-icon">
+                            🎯
+                        </div>
+
+
+                        <span>
+                            QUIZ MASTER
+                        </span>
+
+
+                        <h3>
+                            Perfect Quiz
+                        </h3>
+
+
+                        <p>
+                            Score 5/5 in any world quiz.
+                        </p>
+
+
+                        <small>
+                            🔒 Locked
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- 50 WORDS -->
+
+                    <div
+                        class="achievement-badge locked reveal"
+                        id="badgeMaster"
+                    >
+
+                        <div class="badge-icon">
+                            👑
+                        </div>
+
+
+                        <span>
+                            CAPYLEARN MASTER
+                        </span>
+
+
+                        <h3>
+                            All 50 Words
+                        </h3>
+
+
+                        <p>
+                            Complete all Learning Worlds.
+                        </p>
+
+
+                        <small>
+                            🔒 Locked
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             NEXT STEP
+        ======================================================= -->
+
+        <section class="next-step-section">
+
+            <div class="container">
+
+
+                <div class="next-step-card reveal">
+
+
+                    <div class="next-step-copy">
+
+
+                        <span>
+                            🚀 CAPPY'S NEXT STEP
+                        </span>
+
+
+                        <h2 id="nextStepTitle">
+                            Start your first Learning World.
+                        </h2>
+
+
+                        <p id="nextStepDescription">
+
+                            Animals is a great place to begin.
+
+                        </p>
+
+
+                        <a
+                            href="animals.html"
+                            class="next-step-button"
+                            id="nextStepButton"
+                        >
+                            Start Animals →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="next-step-visual">
+
+
+                        <div class="next-step-circle">
+
+                            <span id="nextStepEmoji">
+                                🦁
+                            </span>
+
+                        </div>
+
+
+                        <img
+                            src="assets/mascot/cappy.png"
+                            alt="Cappy"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+
+                    <a
+                        href="index.html"
+                        class="brand"
+                    >
+
+                        <div class="brand-icon">
+                            <span>C</span>
+                        </div>
+
+
+                        <div class="brand-text">
+
+                            <strong>
+                                CapyLearn
+                            </strong>
+
+                            <small>
+                                Play • Learn • Speak!
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                    <p>
+
+                        Belajar Bahasa Inggris melalui
+                        visual, audio, latihan dan permainan
+                        bersama Cappy.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Progress
+                    </h4>
+
+
+                    <a href="#learningProgress">
+                        Learning Worlds
+                    </a>
+
+
+                    <a href="practice.html">
+                        Practice
+                    </a>
+
+
+                    <a href="games.html">
+                        Games
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Explore
+                    </h4>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="learn.html">
+                        Learn
+                    </a>
+
+
+                    <a href="practice.html">
+                        Practice
+                    </a>
+
+
+                    <a href="games.html">
+                        Games
+                    </a>
+
+
+                    <a href="progress.html">
+                        Progress
+                    </a>
+
+
+                    
+                    <a href="creator.html">
+                        Creator
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+</div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 CapyLearn. Play, Learn, Speak!
+                </p>
+
+                <p>
+                    Made with 💜 for little learners.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+
+        /* ======================================================
+           HEADER
+        ======================================================= */
+
+        const header =
+            document.getElementById(
+                "header"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                header.classList.toggle(
+                    "scrolled",
+                    window.scrollY > 30
+                );
+
+            }
+        );
+
+
+
+        /* ======================================================
+           MOBILE MENU
+        ======================================================= */
+
+        const menuButton =
+            document.getElementById(
+                "menuButton"
+            );
+
+
+        const navMenu =
+            document.getElementById(
+                "navMenu"
+            );
+
+
+        menuButton.addEventListener(
+            "click",
+            () => {
+
+                navMenu.classList.toggle(
+                    "open"
+                );
+
+
+                menuButton.textContent =
+                    navMenu.classList.contains(
+                        "open"
+                    )
+                    ? "✕"
+                    : "☰";
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(
+                ".nav-link"
+            )
+            .forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        () => {
+
+                            navMenu.classList.remove(
+                                "open"
+                            );
+
+                            menuButton.textContent =
+                                "☰";
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* ======================================================
+           REVEAL
+        ======================================================= */
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.10
+                }
+
+            );
+
+
+        document
+            .querySelectorAll(
+                ".reveal"
+            )
+            .forEach(
+                item => {
+
+                    revealObserver.observe(
+                        item
+                    );
+
+                }
+            );
+
+
+
+        /* ======================================================
+           STORAGE HELPERS
+        ======================================================= */
+
+        function getArrayStorage(
+            key
+        ) {
+
+
+            try {
+
+
+                const value =
+                    JSON.parse(
+                        localStorage.getItem(
+                            key
+                        )
+                    );
+
+
+                return Array.isArray(
+                    value
+                )
+                    ? value
+                    : [];
+
+
+            } catch (
+                error
+            ) {
+
+
+                return [];
+
+            }
+
+        }
+
+
+
+        function getNumberStorage(
+            key
+        ) {
+
+
+            return Number(
+                localStorage.getItem(
+                    key
+                )
+            )
+            || 0;
+
+        }
+
+
+
+        /* ======================================================
+           WORLD CONFIG
+        ======================================================= */
+
+        const worlds = [
+
+            {
+                name:
+                    "Animals",
+
+                emoji:
+                    "🦁",
+
+                url:
+                    "animals.html",
+
+                learnedKey:
+                    "capylearnAnimalsLearned",
+
+                quizKey:
+                    "capylearnAnimalsBestQuiz",
+
+                learnedId:
+                    "animalsLearned",
+
+                percentId:
+                    "animalsPercent",
+
+                barId:
+                    "animalsBar",
+
+                quizId:
+                    "animalsQuiz"
+            },
+
+            {
+                name:
+                    "Fruits",
+
+                emoji:
+                    "🍎",
+
+                url:
+                    "fruits.html",
+
+                learnedKey:
+                    "capylearnFruitsLearned",
+
+                quizKey:
+                    "capylearnFruitsBestQuiz",
+
+                learnedId:
+                    "fruitsLearned",
+
+                percentId:
+                    "fruitsPercent",
+
+                barId:
+                    "fruitsBar",
+
+                quizId:
+                    "fruitsQuiz"
+            },
+
+            {
+                name:
+                    "Plants",
+
+                emoji:
+                    "🌱",
+
+                url:
+                    "plants.html",
+
+                learnedKey:
+                    "capylearnPlantsLearned",
+
+                quizKey:
+                    "capylearnPlantsBestQuiz",
+
+                learnedId:
+                    "plantsLearned",
+
+                percentId:
+                    "plantsPercent",
+
+                barId:
+                    "plantsBar",
+
+                quizId:
+                    "plantsQuiz"
+            },
+
+            {
+                name:
+                    "Colors",
+
+                emoji:
+                    "🎨",
+
+                url:
+                    "colors.html",
+
+                learnedKey:
+                    "capylearnColorsLearned",
+
+                quizKey:
+                    "capylearnColorsBestQuiz",
+
+                learnedId:
+                    "colorsLearned",
+
+                percentId:
+                    "colorsPercent",
+
+                barId:
+                    "colorsBar",
+
+                quizId:
+                    "colorsQuiz"
+            },
+
+            {
+                name:
+                    "Numbers",
+
+                emoji:
+                    "🔢",
+
+                url:
+                    "numbers.html",
+
+                learnedKey:
+                    "capylearnNumbersLearned",
+
+                quizKey:
+                    "capylearnNumbersBestQuiz",
+
+                learnedId:
+                    "numbersLearned",
+
+                percentId:
+                    "numbersPercent",
+
+                barId:
+                    "numbersBar",
+
+                quizId:
+                    "numbersQuiz"
+            }
+
+        ];
+
+
+
+        /* ======================================================
+           BADGE HELPER
+        ======================================================= */
+
+        function unlockBadge(
+            id
+        ) {
+
+
+            const badge =
+                document.getElementById(
+                    id
+                );
+
+
+            if (
+                !badge
+            ) {
+
+                return;
+
+            }
+
+
+            badge.classList.remove(
+                "locked"
+            );
+
+
+            badge.classList.add(
+                "unlocked"
+            );
+
+
+            const status =
+                badge.querySelector(
+                    "small"
+                );
+
+
+            if (
+                status
+            ) {
+
+                status.textContent =
+                    "✓ Unlocked";
+
+            }
+
+        }
+
+
+
+        /* ======================================================
+           UPDATE PROGRESS
+        ======================================================= */
+
+        function updateProgressDashboard() {
+
+
+            let totalLearned =
+                0;
+
+
+            let completedWorlds =
+                0;
+
+
+            let perfectQuizFound =
+                false;
+
+
+            let nextWorld =
+                null;
+
+
+
+            /* -----------------------------------------------
+               WORLD DATA
+            ------------------------------------------------ */
+
+            worlds.forEach(
+                world => {
+
+
+                    const learned =
+                        Math.min(
+                            getArrayStorage(
+                                world.learnedKey
+                            ).length,
+                            10
+                        );
+
+
+                    const quiz =
+                        Math.min(
+                            getNumberStorage(
+                                world.quizKey
+                            ),
+                            5
+                        );
+
+
+                    const percent =
+                        learned * 10;
+
+
+                    totalLearned +=
+                        learned;
+
+
+                    if (
+                        learned === 10
+                    ) {
+
+                        completedWorlds++;
+
+                    }
+
+
+                    if (
+                        quiz === 5
+                    ) {
+
+                        perfectQuizFound =
+                            true;
+
+                    }
+
+
+                    if (
+                        !nextWorld
+                        &&
+                        learned < 10
+                    ) {
+
+                        nextWorld =
+                            world;
+
+                    }
+
+
+
+                    document
+                        .getElementById(
+                            world.learnedId
+                        )
+                        .textContent =
+                        learned + " / 10";
+
+
+                    document
+                        .getElementById(
+                            world.percentId
+                        )
+                        .textContent =
+                        percent + "%";
+
+
+                    document
+                        .getElementById(
+                            world.barId
+                        )
+                        .style.width =
+                        percent + "%";
+
+
+                    document
+                        .getElementById(
+                            world.quizId
+                        )
+                        .textContent =
+                        quiz + " / 5";
+
+                }
+            );
+
+
+
+            /* -----------------------------------------------
+               TOTAL PERCENT
+            ------------------------------------------------ */
+
+            const overallPercent =
+                Math.round(
+                    totalLearned
+                    / 50
+                    * 100
+                );
+
+
+            const remaining =
+                50
+                - totalLearned;
+
+
+
+            document
+                .documentElement
+                .style
+                .setProperty(
+                    "--overall-progress",
+                    overallPercent * 3.6
+                    + "deg"
+                );
+
+
+            document
+                .getElementById(
+                    "overallPercent"
+                )
+                .textContent =
+                overallPercent
+                + "%";
+
+
+            document
+                .getElementById(
+                    "overallLearned"
+                )
+                .textContent =
+                totalLearned;
+
+
+            document
+                .getElementById(
+                    "overallRemaining"
+                )
+                .textContent =
+                remaining;
+
+
+            document
+                .getElementById(
+                    "overallCompletedWorlds"
+                )
+                .textContent =
+                completedWorlds;
+
+
+            document
+                .getElementById(
+                    "heroLearned"
+                )
+                .textContent =
+                totalLearned
+                + " / 50";
+
+
+
+            /* -----------------------------------------------
+               OVERALL MESSAGE
+            ------------------------------------------------ */
+
+            let title =
+                "Your adventure is just beginning!";
+
+
+            let description =
+                "Mulai pelajari vocabulary dan progress kamu akan tampil di sini.";
+
+
+            if (
+                overallPercent >= 100
+            ) {
+
+                title =
+                    "You've completed all 5 worlds! 🎉";
+
+
+                description =
+                    "Luar biasa! Kamu sudah mempelajari seluruh 50 vocabulary CapyLearn.";
+
+            } else if (
+                overallPercent >= 75
+            ) {
+
+                title =
+                    "You're almost there! 🚀";
+
+
+                description =
+                    "Sedikit lagi menuju 50 vocabulary. Pertahankan progressmu!";
+
+            } else if (
+                overallPercent >= 50
+            ) {
+
+                title =
+                    "You're halfway there! 🌟";
+
+
+                description =
+                    "Lebih dari setengah perjalanan sudah selesai. Terus lanjut!";
+
+            } else if (
+                overallPercent >= 20
+            ) {
+
+                title =
+                    "Great progress! 💜";
+
+
+                description =
+                    "Vocabulary kamu mulai bertambah. Terus belajar sedikit demi sedikit.";
+
+            } else if (
+                overallPercent > 0
+            ) {
+
+                title =
+                    "Great start! 🐾";
+
+
+                description =
+                    "Kamu sudah memulai perjalanan CapyLearn. Ayo lanjutkan!";
+
+            }
+
+
+            document
+                .getElementById(
+                    "overallTitle"
+                )
+                .textContent =
+                title;
+
+
+            document
+                .getElementById(
+                    "overallDescription"
+                )
+                .textContent =
+                description;
+
+
+
+            /* -----------------------------------------------
+               PRACTICE + GAMES
+            ------------------------------------------------ */
+
+            const mixedBest =
+                Math.min(
+                    getNumberStorage(
+                        "capylearnMixedPracticeBest"
+                    ),
+                    10
+                );
+
+
+            const pictureBest =
+                Math.min(
+                    getNumberStorage(
+                        "capylearnPictureBest"
+                    ),
+                    10
+                );
+
+
+            const matchBest =
+                Math.min(
+                    getNumberStorage(
+                        "capylearnMatchBest"
+                    ),
+                    5
+                );
+
+
+            const speedBest =
+                getNumberStorage(
+                    "capylearnSpeedBest"
+                );
+
+
+
+            document
+                .getElementById(
+                    "mixedPracticeBest"
+                )
+                .textContent =
+                mixedBest
+                + " / 10";
+
+
+            document
+                .getElementById(
+                    "pictureGameBest"
+                )
+                .textContent =
+                pictureBest
+                + " / 10";
+
+
+            document
+                .getElementById(
+                    "wordMatchBest"
+                )
+                .textContent =
+                matchBest
+                + " / 5";
+
+
+            document
+                .getElementById(
+                    "speedGameBest"
+                )
+                .textContent =
+                speedBest;
+
+
+
+            /* -----------------------------------------------
+               BADGES
+            ------------------------------------------------ */
+
+            let badgeCount =
+                0;
+
+
+            if (
+                totalLearned >= 1
+            ) {
+
+                unlockBadge(
+                    "badgeFirstWord"
+                );
+
+                badgeCount++;
+
+            }
+
+
+            if (
+                totalLearned >= 10
+            ) {
+
+                unlockBadge(
+                    "badgeTenWords"
+                );
+
+                badgeCount++;
+
+            }
+
+
+            if (
+                totalLearned >= 25
+            ) {
+
+                unlockBadge(
+                    "badgeHalfWay"
+                );
+
+                badgeCount++;
+
+            }
+
+
+            if (
+                completedWorlds >= 1
+            ) {
+
+                unlockBadge(
+                    "badgeWorld"
+                );
+
+                badgeCount++;
+
+            }
+
+
+            if (
+                perfectQuizFound
+            ) {
+
+                unlockBadge(
+                    "badgeQuiz"
+                );
+
+                badgeCount++;
+
+            }
+
+
+            if (
+                totalLearned >= 50
+            ) {
+
+                unlockBadge(
+                    "badgeMaster"
+                );
+
+                badgeCount++;
+
+            }
+
+
+
+            document
+                .getElementById(
+                    "heroBadges"
+                )
+                .textContent =
+                badgeCount;
+
+
+
+            /* -----------------------------------------------
+               STARS
+            ------------------------------------------------ */
+
+            const learningStars =
+                totalLearned * 10;
+
+
+            const gameStars =
+                pictureBest
+                + matchBest
+                + speedBest
+                + mixedBest;
+
+            const totalStars =
+                getCapyGlobalStars();
+
+
+
+            updateCapyGlobalStars();
+
+
+            document
+                .getElementById(
+                    "heroStars"
+                )
+                .textContent =
+                getCapyGlobalStars();
+
+
+
+            /* -----------------------------------------------
+               NEXT STEP
+            ------------------------------------------------ */
+
+            const nextTitle =
+                document.getElementById(
+                    "nextStepTitle"
+                );
+
+
+            const nextDescription =
+                document.getElementById(
+                    "nextStepDescription"
+                );
+
+
+            const nextButton =
+                document.getElementById(
+                    "nextStepButton"
+                );
+
+
+            const nextEmoji =
+                document.getElementById(
+                    "nextStepEmoji"
+                );
+
+
+
+            if (
+                nextWorld
+            ) {
+
+
+                const nextCount =
+                    Math.min(
+                        getArrayStorage(
+                            nextWorld.learnedKey
+                        ).length,
+                        10
+                    );
+
+
+                if (
+                    nextCount === 0
+                ) {
+
+                    nextTitle.textContent =
+                        "Start "
+                        + nextWorld.name
+                        + " next!";
+
+
+                    nextDescription.textContent =
+                        "Cappy recommends exploring "
+                        + nextWorld.name
+                        + " as your next Learning World.";
+
+                } else {
+
+                    nextTitle.textContent =
+                        "Continue "
+                        + nextWorld.name
+                        + "!";
+
+
+                    nextDescription.textContent =
+                        "You have learned "
+                        + nextCount
+                        + " of 10 words in "
+                        + nextWorld.name
+                        + ".";
+
+                }
+
+
+                nextButton.href =
+                    nextWorld.url;
+
+
+                nextButton.textContent =
+                    nextCount === 0
+                    ? "Start "
+                        + nextWorld.name
+                        + " →"
+                    : "Continue "
+                        + nextWorld.name
+                        + " →";
+
+
+                nextEmoji.textContent =
+                    nextWorld.emoji;
+
+
+            } else {
+
+
+                nextTitle.textContent =
+                    "All Learning Worlds completed! 🎉";
+
+
+                nextDescription.textContent =
+                    "Amazing! Now practice your vocabulary and try to beat your game records.";
+
+
+                nextButton.href =
+                    "games.html";
+
+
+                nextButton.textContent =
+                    "Play Games →";
+
+
+                nextEmoji.textContent =
+                    "🏆";
+
+            }
+
+        }
+
+
+
+        updateProgressDashboard();
+
+
+
+        /* ======================================================
+           REFRESH WHEN RETURNING TO PAGE
+        ======================================================= */
+
+        window.addEventListener(
+            "pageshow",
+            updateProgressDashboard
+        );
+
+
+        window.addEventListener(
+            "storage",
+            updateProgressDashboard
+        );
+
+
+    
+        /* ======================================================
+           GLOBAL STAR TOTAL — CONSISTENT ACROSS ALL PAGES
+        ======================================================= */
+
+        function capySafeArrayLength(key) {
+            try {
+                const value = JSON.parse(
+                    localStorage.getItem(key)
+                );
+
+                return Array.isArray(value)
+                    ? Math.min(value.length, 10)
+                    : 0;
+
+            } catch (error) {
+                return 0;
+            }
+        }
+
+
+        function capySafeScore(key, maxValue = null) {
+            const raw =
+                Number(
+                    localStorage.getItem(key)
+                );
+
+            const value =
+                Number.isFinite(raw)
+                    ? Math.max(0, raw)
+                    : 0;
+
+            return maxValue === null
+                ? value
+                : Math.min(value, maxValue);
+        }
+
+
+        function getCapyGlobalStars() {
+            const learnedTotal =
+                capySafeArrayLength("capylearnAnimalsLearned")
+                + capySafeArrayLength("capylearnFruitsLearned")
+                + capySafeArrayLength("capylearnPlantsLearned")
+                + capySafeArrayLength("capylearnColorsLearned")
+                + capySafeArrayLength("capylearnNumbersLearned");
+
+            const mixedBest =
+                capySafeScore(
+                    "capylearnMixedPracticeBest",
+                    10
+                );
+
+            const pictureBest =
+                capySafeScore(
+                    "capylearnPictureBest",
+                    10
+                );
+
+            const matchBest =
+                capySafeScore(
+                    "capylearnMatchBest",
+                    5
+                );
+
+            const speedBest =
+                capySafeScore(
+                    "capylearnSpeedBest"
+                );
+
+            return 120
+                + (learnedTotal * 10)
+                + mixedBest
+                + pictureBest
+                + matchBest
+                + speedBest;
+        }
+
+
+        function updateCapyGlobalStars() {
+            const starElement =
+                document.getElementById(
+                    "starCount"
+                );
+
+            if (starElement) {
+                starElement.textContent =
+                    getCapyGlobalStars();
+            }
+        }
+
+
+
+        updateCapyGlobalStars();
+
+        window.addEventListener(
+            "pageshow",
+            updateCapyGlobalStars
+        );
+
+        window.addEventListener(
+            "storage",
+            updateCapyGlobalStars
+        );
+
+</script>
+
+
+    <script src="v2.js"></script>
+
+
+    <script src="profiles-v4.js"></script>
+    <script src="engagement.js"></script>
+    <script src="pwa.js"></script>
+
+</body>
+
+</html>

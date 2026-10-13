@@ -1,0 +1,250 @@
+/* ==========================================================
+   CAPYLEARN V4 — MULTI PROFILE
+========================================================== */
+
+.v4-profile-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 12000;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    background: rgba(25,28,52,.52);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+
+.v4-profile-modal {
+    position: relative;
+    width: min(660px, 96vw);
+    max-height: 90vh;
+    overflow: auto;
+    padding: 34px;
+    border: 1px solid rgba(255,255,255,.76);
+    border-radius: 31px;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(103,200,255,.16), transparent 30%),
+      radial-gradient(circle at 8% 90%, rgba(123,110,246,.12), transparent 30%),
+      #fffdfb;
+    box-shadow: 0 42px 120px rgba(32,28,80,.30);
+}
+
+.v4-profile-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(37,48,74,.06);
+    cursor: pointer;
+}
+
+.v4-profile-kicker {
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eeeaff;
+    color: #5c4ee7;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.v4-profile-modal h2 {
+    margin-top: 13px;
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(31px, 5vw, 46px);
+    line-height: 1.04;
+}
+
+.v4-profile-sub {
+    margin-top: 10px;
+    color: #707a95;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.v4-profile-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 23px;
+}
+
+.v4-profile-item {
+    display: grid;
+    grid-template-columns: 1fr 44px;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.v4-profile-main {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid rgba(44,53,80,.08);
+    border-radius: 18px;
+    background: #fff;
+    text-align: left;
+    cursor: pointer;
+}
+
+.v4-profile-item.active .v4-profile-main {
+    border-color: rgba(123,110,246,.34);
+    background: #f6f3ff;
+    box-shadow: 0 10px 26px rgba(123,110,246,.10);
+}
+
+.v4-profile-avatar {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: linear-gradient(145deg,#eeeaff,#e8f8ff);
+    font-size: 26px;
+}
+
+.v4-profile-name {
+    min-width: 0;
+}
+
+.v4-profile-name strong {
+    display: block;
+    color: #25304a;
+    font: 700 17px "Fredoka", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.v4-profile-name small {
+    display: block;
+    margin-top: 2px;
+    color: #80889e;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.v4-profile-check {
+    color: #6b5be7;
+    font-weight: 900;
+}
+
+.v4-profile-delete {
+    border: 1px solid rgba(255,120,110,.10);
+    border-radius: 15px;
+    background: #fff5f3;
+    cursor: pointer;
+}
+
+.v4-profile-actions {
+    display: flex;
+    gap: 9px;
+    margin-top: 22px;
+}
+
+.v4-profile-primary,
+.v4-profile-secondary {
+    min-height: 48px;
+    flex: 1;
+    border-radius: 14px;
+    font: 900 10px "Nunito", sans-serif;
+    cursor: pointer;
+}
+
+.v4-profile-primary {
+    border: 0;
+    background: linear-gradient(135deg,#7b6ef6,#5c4ee7);
+    color: #fff;
+}
+
+.v4-profile-secondary {
+    border: 1px solid rgba(123,110,246,.14);
+    background: #fff;
+    color: #5c4ee7;
+}
+
+.v4-label {
+    display: block;
+    margin: 21px 0 8px;
+    color: #25304a;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.v4-profile-input {
+    width: 100%;
+    height: 51px;
+    padding: 0 14px;
+    border: 1px solid rgba(44,53,80,.10);
+    border-radius: 14px;
+    outline: 0;
+    font: 800 14px "Nunito", sans-serif;
+}
+
+.v4-profile-input:focus {
+    border-color: rgba(123,110,246,.46);
+    box-shadow: 0 0 0 4px rgba(123,110,246,.09);
+}
+
+.v4-avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 9px;
+}
+
+.v4-avatar-option {
+    aspect-ratio: 1;
+    border: 1px solid rgba(44,53,80,.08);
+    border-radius: 15px;
+    background: #fff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.v4-avatar-option.selected {
+    background: #f0edff;
+    border-color: rgba(123,110,246,.38);
+    transform: translateY(-2px);
+}
+
+.v4-full {
+    width: 100%;
+    margin-top: 23px;
+}
+
+.pwa-install-button {
+    display: none;
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    z-index: 185;
+    min-height: 44px;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    border: 1px solid rgba(255,255,255,.72);
+    border-radius: 999px;
+    background: rgba(255,255,255,.90);
+    color: #25304a;
+    box-shadow: 0 14px 34px rgba(52,46,105,.14);
+    backdrop-filter: blur(16px);
+    font: 900 10px "Nunito", sans-serif;
+    cursor: pointer;
+}
+
+.pwa-install-button.show {
+    display: inline-flex;
+}
+
+@media (max-width: 640px) {
+    .v4-profile-modal { padding: 27px 20px; border-radius: 24px; }
+    .v4-avatar-grid { grid-template-columns: repeat(3,1fr); }
+    .v4-profile-actions { flex-direction: column; }
+    .pwa-install-button { left: 12px; bottom: 64px; }
+}

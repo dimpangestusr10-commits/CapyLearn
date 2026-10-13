@@ -1,0 +1,710 @@
+/* ==========================================================
+   CAPYLEARN V3 — ENGAGEMENT SYSTEM
+   Profile • XP • Daily Missions • Achievements • Cappy
+========================================================== */
+
+:root {
+    --eng-glass: rgba(255,255,255,.82);
+    --eng-border: rgba(123,110,246,.13);
+    --eng-shadow: 0 24px 70px rgba(69,58,135,.13);
+    --eng-shadow-soft: 0 14px 36px rgba(69,58,135,.09);
+}
+
+body.engagement-modal-open {
+    overflow: hidden;
+}
+
+/* ---------- compact global launcher ---------- */
+.engagement-launcher {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 180;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.engagement-pill {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    border: 1px solid rgba(255,255,255,.72);
+    border-radius: 999px;
+    background: rgba(255,255,255,.88);
+    color: var(--text, #25304a);
+    box-shadow: 0 14px 34px rgba(52,46,105,.14);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    font-family: "Nunito", sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.engagement-pill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 42px rgba(52,46,105,.19);
+    background: #fff;
+}
+
+.engagement-pill .eng-avatar-mini {
+    font-size: 18px;
+}
+
+/* ---------- onboarding ---------- */
+.engagement-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    background: rgba(28,31,55,.48);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.engagement-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.engagement-modal {
+    position: relative;
+    width: min(620px, 96vw);
+    max-height: min(830px, 92vh);
+    overflow: auto;
+    padding: 34px;
+    border: 1px solid rgba(255,255,255,.78);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 90% 8%, rgba(103,200,255,.18), transparent 28%),
+        radial-gradient(circle at 8% 88%, rgba(123,110,246,.12), transparent 28%),
+        #fffdfb;
+    box-shadow: 0 42px 120px rgba(35,31,85,.28);
+    transform: translateY(18px) scale(.98);
+    transition: transform .26s ease;
+}
+
+.engagement-backdrop.open .engagement-modal {
+    transform: translateY(0) scale(1);
+}
+
+.engagement-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(37,48,74,.06);
+    color: #25304a;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.engagement-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eeeaff;
+    color: #5c4ee7;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.engagement-modal h2 {
+    margin-top: 14px;
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(31px, 5vw, 47px);
+    line-height: 1.02;
+    letter-spacing: -1.4px;
+}
+
+.engagement-modal .engagement-sub {
+    margin-top: 12px;
+    color: #707a95;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.engagement-field {
+    margin-top: 22px;
+}
+
+.engagement-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #25304a;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.engagement-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 15px;
+    border: 1px solid rgba(44,53,80,.10);
+    border-radius: 15px;
+    outline: none;
+    background: #fff;
+    color: #25304a;
+    font: 800 14px "Nunito", sans-serif;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.engagement-input:focus {
+    border-color: rgba(123,110,246,.48);
+    box-shadow: 0 0 0 4px rgba(123,110,246,.10);
+}
+
+.engagement-avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 9px;
+}
+
+.engagement-avatar-option {
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(44,53,80,.08);
+    border-radius: 16px;
+    background: #fff;
+    font-size: 27px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.engagement-avatar-option:hover,
+.engagement-avatar-option.selected {
+    border-color: rgba(123,110,246,.42);
+    background: #f3f0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(123,110,246,.12);
+}
+
+.engagement-submit {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 24px;
+    border: 0;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #7b6ef6, #5c4ee7);
+    color: #fff;
+    box-shadow: 0 13px 30px rgba(92,78,231,.23);
+    font: 900 12px "Nunito", sans-serif;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.engagement-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 17px 36px rgba(92,78,231,.28);
+}
+
+/* ---------- V3 dashboard ---------- */
+.v3-engagement-section {
+    position: relative;
+    padding: 54px 0 74px;
+}
+
+.v3-engagement-grid {
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.v3-profile-card,
+.v3-missions-card,
+.v3-continue-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--eng-border);
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 96% 5%, rgba(103,200,255,.13), transparent 24%),
+        linear-gradient(145deg, rgba(255,255,255,.96), rgba(249,247,255,.93));
+    box-shadow: var(--eng-shadow-soft);
+}
+
+.v3-profile-card {
+    padding: 28px;
+}
+
+.v3-profile-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.v3-profile-avatar {
+    width: 62px;
+    height: 62px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #eeeaff, #e7f8ff);
+    box-shadow: inset 0 0 0 1px rgba(123,110,246,.09);
+    font-size: 31px;
+}
+
+.v3-profile-copy small,
+.v3-card-kicker {
+    color: #6d62df;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.v3-profile-copy h3 {
+    margin-top: 2px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 26px;
+}
+
+.v3-profile-copy p {
+    margin-top: 2px;
+    color: #707a95;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.v3-profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    margin-top: 21px;
+}
+
+.v3-profile-stat {
+    padding: 13px;
+    border: 1px solid rgba(44,53,80,.06);
+    border-radius: 16px;
+    background: rgba(255,255,255,.76);
+}
+
+.v3-profile-stat strong {
+    display: block;
+    color: #25304a;
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+}
+
+.v3-profile-stat span {
+    display: block;
+    margin-top: 1px;
+    color: #7b849d;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.v3-xp-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 19px;
+    color: #5f6882;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.v3-xp-track {
+    height: 11px;
+    margin-top: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #eceaf5;
+}
+
+.v3-xp-fill {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #7b6ef6, #67c8ff);
+    box-shadow: 0 0 18px rgba(103,200,255,.36);
+    transition: width .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.v3-side-stack {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 18px;
+}
+
+.v3-missions-card {
+    padding: 26px;
+}
+
+.v3-card-title {
+    margin-top: 7px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 25px;
+}
+
+.v3-card-sub {
+    margin-top: 4px;
+    color: #7b849d;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.v3-mission-list {
+    display: grid;
+    gap: 9px;
+    margin-top: 17px;
+}
+
+.v3-mission {
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(44,53,80,.06);
+    border-radius: 15px;
+    background: rgba(255,255,255,.76);
+}
+
+.v3-mission-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #f0edff;
+    font-size: 18px;
+}
+
+.v3-mission strong {
+    display: block;
+    font-size: 10px;
+}
+
+.v3-mission span {
+    display: block;
+    margin-top: 2px;
+    color: #818aa1;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.v3-mission-status {
+    min-width: 42px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    background: #f0eff6;
+    color: #687088;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.v3-mission.done .v3-mission-status {
+    background: #e6fff2;
+    color: #2b9463;
+}
+
+.v3-mission.done {
+    border-color: rgba(120,225,176,.23);
+}
+
+.v3-mission-reward {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(44,53,80,.10);
+    color: #6e7690;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.v3-continue-card {
+    padding: 19px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.v3-continue-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--eng-shadow);
+}
+
+.v3-continue-card h4 {
+    margin-top: 4px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+}
+
+.v3-continue-arrow {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #7b6ef6;
+    color: white;
+    box-shadow: 0 10px 22px rgba(123,110,246,.23);
+}
+
+/* ---------- Cappy toast ---------- */
+.cappy-toast-stack {
+    position: fixed;
+    right: 18px;
+    bottom: 76px;
+    z-index: 9500;
+    width: min(360px, calc(100vw - 36px));
+    display: grid;
+    gap: 9px;
+    pointer-events: none;
+}
+
+.cappy-toast {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 11px;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,.78);
+    border-radius: 18px;
+    background: rgba(255,255,255,.93);
+    box-shadow: 0 18px 48px rgba(45,39,95,.17);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    transform: translateY(14px) scale(.98);
+    animation: cappyToastIn .28s ease forwards;
+}
+
+.cappy-toast-avatar {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #eeeaff, #e7f8ff);
+    font-size: 22px;
+}
+
+.cappy-toast strong {
+    display: block;
+    color: #25304a;
+    font-size: 10px;
+}
+
+.cappy-toast p {
+    margin-top: 2px;
+    color: #707a95;
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+@keyframes cappyToastIn {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- achievement ---------- */
+.achievement-card {
+    text-align: center;
+}
+
+.achievement-burst {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 35% 25%, #fff8c9, #ffd76a 46%, #ffbb4f);
+    box-shadow: 0 18px 44px rgba(255,183,69,.26);
+    font-size: 42px;
+    animation: achievementPop .5s cubic-bezier(.2,1.4,.4,1);
+}
+
+@keyframes achievementPop {
+    from { transform: scale(.3) rotate(-10deg); opacity: 0; }
+    to { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.achievement-card h2 {
+    text-align: center;
+}
+
+.achievement-card .engagement-sub {
+    text-align: center;
+}
+
+.achievement-reward-chip {
+    width: fit-content;
+    margin: 15px auto 0;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #e9fff3;
+    color: #2c9465;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+/* ---------- legacy ---------- */
+.legacy-letter {
+    margin-top: 22px;
+    padding: 24px;
+    border: 1px solid rgba(123,110,246,.10);
+    border-radius: 22px;
+    background: rgba(255,255,255,.74);
+    color: #59627b;
+    font-family: "Nunito", sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.legacy-signature {
+    display: block;
+    margin-top: 18px;
+    color: #5c4ee7;
+    font-family: "Fredoka", sans-serif;
+    font-size: 15px;
+}
+
+.v3-legacy-button {
+    width: fit-content;
+    margin: 22px auto 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 17px;
+    border: 1px solid rgba(123,110,246,.16);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    color: #5c4ee7;
+    box-shadow: 0 14px 32px rgba(70,55,125,.09);
+    font: 900 10px "Nunito", sans-serif;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.v3-legacy-button:hover {
+    transform: translateY(-3px);
+}
+
+/* ---------- confetti ---------- */
+.v3-confetti-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.v3-confetti {
+    position: absolute;
+    top: -16px;
+    width: 9px;
+    height: 15px;
+    border-radius: 3px;
+    animation: confettiFall 1.8s linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translate3d(var(--drift), 110vh, 0) rotate(720deg);
+        opacity: .2;
+    }
+}
+
+/* ---------- sound button ---------- */
+.engagement-sound {
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 920px) {
+    .v3-engagement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .v3-engagement-section {
+        padding: 34px 0 56px;
+    }
+
+    .v3-profile-card,
+    .v3-missions-card {
+        padding: 21px;
+        border-radius: 24px;
+    }
+
+    .v3-profile-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .engagement-modal {
+        padding: 27px 21px;
+        border-radius: 25px;
+    }
+
+    .engagement-avatar-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .engagement-launcher {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .engagement-pill.profile-pill {
+        max-width: 52vw;
+    }
+
+    .engagement-pill.profile-pill .eng-name-mini {
+        max-width: 88px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .v3-xp-fill,
+    .achievement-burst,
+    .cappy-toast,
+    .v3-confetti {
+        animation: none !important;
+        transition: none !important;
+    }
+}

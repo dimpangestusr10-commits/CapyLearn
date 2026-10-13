@@ -1,0 +1,317 @@
+/* ==========================================================
+   CAPYLEARN ABOUT — STANDALONE PAGE
+========================================================== */
+
+.about-page {
+    overflow: hidden;
+}
+
+.about-hero {
+    position: relative;
+    padding: 96px 0 110px;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(123,110,246,.12), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(103,200,255,.14), transparent 28%);
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    gap: 68px;
+    align-items: center;
+}
+
+.about-kicker,
+.about-section-heading > span,
+.about-philosophy-card span {
+    color: var(--purple-dark);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.1px;
+}
+
+.about-copy h1 {
+    max-width: 760px;
+    margin-top: 18px;
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(50px, 6.2vw, 82px);
+    line-height: .98;
+    letter-spacing: -3px;
+}
+
+.about-copy h1 span {
+    display: block;
+    background: linear-gradient(90deg, var(--purple-dark), var(--purple), #4aaede);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-copy p {
+    max-width: 680px;
+    margin-top: 24px;
+    color: var(--text-soft);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.about-mascot-card {
+    position: relative;
+    min-height: 560px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.82);
+    border-radius: 40px;
+    background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(238,234,255,.80));
+    box-shadow: var(--shadow);
+}
+
+.about-mascot-card img {
+    position: relative;
+    z-index: 3;
+    width: min(390px, 76%);
+    filter: drop-shadow(0 24px 38px rgba(65,55,120,.18));
+}
+
+.about-mascot-label {
+    position: absolute;
+    z-index: 5;
+    left: 28px;
+    bottom: 26px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.9);
+    box-shadow: var(--shadow-soft);
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.about-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.orb-a {
+    width: 220px;
+    height: 220px;
+    top: 45px;
+    right: 42px;
+    background: rgba(123,110,246,.16);
+}
+
+.orb-b {
+    width: 160px;
+    height: 160px;
+    left: 38px;
+    bottom: 70px;
+    background: rgba(103,200,255,.18);
+}
+
+.about-mission,
+.about-philosophy,
+.about-cta {
+    padding: 110px 0;
+}
+
+.about-section-heading {
+    max-width: 760px;
+    margin-bottom: 44px;
+}
+
+.about-section-heading h2,
+.about-philosophy-card h2 {
+    margin-top: 10px;
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+.about-section-heading p {
+    margin-top: 16px;
+    color: var(--text-soft);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.about-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.about-feature-card {
+    padding: 28px 24px;
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    background: white;
+    box-shadow: var(--shadow-soft);
+}
+
+.about-feature-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    background: var(--purple-soft);
+    font-size: 26px;
+}
+
+.about-feature-card h3 {
+    margin-top: 22px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 23px;
+}
+
+.about-feature-card p {
+    margin-top: 10px;
+    color: var(--text-soft);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.about-numbers {
+    padding: 0 0 110px;
+}
+
+.about-number-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.about-number-grid div {
+    padding: 30px 20px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #fff, #faf8ff);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.about-number-grid strong {
+    display: block;
+    color: var(--purple);
+    font-family: "Fredoka", sans-serif;
+    font-size: 48px;
+}
+
+.about-number-grid span {
+    display: block;
+    margin-top: 4px;
+    color: var(--text-soft);
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.about-philosophy-card {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 56px;
+    padding: 54px;
+    border-radius: 36px;
+    color: white;
+    background:
+        radial-gradient(circle at 82% 16%, rgba(103,200,255,.18), transparent 28%),
+        linear-gradient(145deg, #27304d, #3d3a77 55%, #6759cf);
+    box-shadow: 0 36px 90px rgba(50,45,110,.2);
+}
+
+.about-philosophy-card span {
+    color: #cfc9ff;
+}
+
+.about-philosophy-card p {
+    align-self: center;
+    color: rgba(255,255,255,.68);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.about-cta {
+    padding-top: 0;
+}
+
+.about-cta-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 44px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, var(--purple-soft), #edf8ff);
+    border: 1px solid rgba(123,110,246,.10);
+}
+
+.about-cta-card small {
+    color: var(--purple-dark);
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .9px;
+}
+
+.about-cta-card h2 {
+    margin-top: 5px;
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(30px, 4vw, 45px);
+}
+
+@media (max-width: 980px) {
+    .about-hero-grid,
+    .about-philosophy-card {
+        grid-template-columns: 1fr;
+    }
+
+    .about-copy {
+        text-align: center;
+    }
+
+    .about-copy p {
+        margin-inline: auto;
+    }
+
+    .about-actions {
+        justify-content: center;
+    }
+
+    .about-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .about-hero {
+        padding-top: 60px;
+    }
+
+    .about-copy h1 {
+        font-size: 46px;
+    }
+
+    .about-mascot-card {
+        min-height: 430px;
+    }
+
+    .about-feature-grid,
+    .about-number-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-philosophy-card {
+        padding: 32px 24px;
+    }
+
+    .about-cta-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

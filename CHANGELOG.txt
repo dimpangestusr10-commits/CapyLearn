@@ -1,0 +1,31 @@
+CapyLearn V2 — Visual Experience Upgrade
+=========================================
+
+What changed
+- Added a shared V2 experience layer across every page via v2.css and v2.js.
+- Added cinematic page entrance/exit transitions for internal navigation.
+- Added subtle cursor-reactive ambient lighting on desktop.
+- Added staggered scroll-reveal animations across major sections and cards.
+- Added gentle 3D tilt and cursor spotlight effects to cards on precise-pointer devices.
+- Added tasteful floating hero particles and subtle floating motion to hero imagery/mascot elements.
+- Added magnetic hover motion to primary CTAs.
+- Refined header/navigation into a premium glass treatment when scrolling.
+- Added shimmer treatment to the global star counter.
+- Added animated stat counters on Creator project metrics.
+- Added progress-bar light sweep animations without changing underlying progress values.
+- Added stronger world-specific ambient identity to Animals, Fruits, Plants, Colors, and Numbers.
+- Added enhanced arcade polish to Games and editorial polish to Creator.
+- Added reduced-motion support for accessibility and disabled heavier pointer effects on touch/mobile.
+
+Functionality preserved
+- Existing page-specific HTML/CSS/JS remain intact.
+- Existing localStorage keys and global stars calculations were not changed.
+- Learning content, practice logic, games, progress logic, Creator content/photo, and Cyra dedication were not rewritten.
+- Existing href destinations and assets were retained.
+
+New files
+- v2.css
+- v2.js
+
+Installation
+Copy every file in this package over the existing CapyLearn folder and choose Replace/Overwrite All. Then hard-refresh the browser (Ctrl+F5).

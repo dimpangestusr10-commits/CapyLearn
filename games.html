@@ -1,0 +1,3487 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Games — CapyLearn</title>
+
+    <meta
+        name="description"
+        content="Main game Bahasa Inggris interaktif bersama Cappy: Picture Guess, Word Match dan Speed Challenge."
+    >
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- GLOBAL CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- GAMES CSS -->
+
+    <link
+        rel="stylesheet"
+        href="games.css"
+    >
+
+    <link rel="stylesheet" href="v2.css">
+
+
+    <link rel="stylesheet" href="engagement.css">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#7B6EF6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="CapyLearn">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+    <link rel="stylesheet" href="profiles-v4.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================================
+         BACKGROUND
+    ========================================================== -->
+
+    <div class="page-bg">
+
+        <span class="bg-blob blob-one"></span>
+
+        <span class="bg-blob blob-two"></span>
+
+        <span class="bg-blob blob-three"></span>
+
+    </div>
+
+
+
+    <!-- ==========================================================
+         HEADER
+    ========================================================== -->
+
+    <header
+        class="header"
+        id="header"
+    >
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- BRAND -->
+
+                <a
+                    href="index.html"
+                    class="brand"
+                >
+
+                    <div class="brand-icon">
+
+                        <span>C</span>
+
+                    </div>
+
+
+                    <div class="brand-text">
+
+                        <strong>
+                            CapyLearn
+                        </strong>
+
+                        <small>
+                            Play • Learn • Speak!
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- NAV -->
+
+                <div
+                    class="nav-menu"
+                    id="navMenu"
+                >
+
+                    <a
+                        href="index.html"
+                        class="nav-link"
+                    >
+                        Home
+                    </a>
+
+
+                    <a
+                        href="learn.html"
+                        class="nav-link"
+                    >
+                        Learn
+                    </a>
+
+
+                    <a
+                        href="practice.html"
+                        class="nav-link"
+                    >
+                        Practice
+                    </a>
+
+
+                    <a
+                        href="games.html"
+                        class="nav-link active"
+                    >
+                        Games
+                    </a>
+
+
+                    <a
+                        href="progress.html"
+                        class="nav-link"
+                    >
+                        Progress
+                    </a>
+                    <a
+                        href="creator.html"
+                        class="nav-link"
+                    >
+                        Creator
+                    </a>
+
+
+
+                    <a
+                        href="about.html"
+                        class="nav-link"
+                    >
+                        About
+                    </a>
+
+                </div>
+
+
+
+                <!-- ACTION -->
+
+                <div class="nav-actions">
+
+
+                    <div class="star-counter">
+
+                        ⭐
+
+                        <span id="starCount">
+                            120
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#gameArcade"
+                        class="nav-button"
+                    >
+                        Play Games
+                    </a>
+
+
+                    <button
+                        class="menu-button"
+                        id="menuButton"
+                        type="button"
+                        aria-label="Buka menu"
+                    >
+                        ☰
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================================
+         MAIN
+    ========================================================== -->
+
+    <main class="games-page">
+
+
+        <!-- ======================================================
+             HERO
+        ======================================================= -->
+
+        <section class="games-hero">
+
+            <div class="container games-hero-grid">
+
+
+                <!-- LEFT -->
+
+                <div class="games-hero-content reveal">
+
+
+                    <div class="games-badge">
+
+                        🎮 CAPPY'S GAME ARCADE
+
+                    </div>
+
+
+
+                    <h1>
+
+                        Learn English
+
+                        <span>
+                            by playing!
+                        </span>
+
+                    </h1>
+
+
+
+                    <p>
+
+                        Uji vocabulary dari Animals, Fruits,
+                        Plants, Colors dan Numbers melalui
+                        permainan interaktif bersama Cappy.
+
+                    </p>
+
+
+
+                    <div class="games-hero-actions">
+
+
+                        <a
+                            href="#gameArcade"
+                            class="primary-button"
+                        >
+                            🎮 Choose a Game
+                        </a>
+
+
+                        <a
+                            href="#pictureGame"
+                            class="secondary-button"
+                        >
+                            🚀 Play Now
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="games-hero-stats">
+
+
+                        <div>
+
+                            <span>
+                                🎮
+                            </span>
+
+                            <strong>
+                                3 Games
+                            </strong>
+
+                            <small>
+                                Play & learn
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                🌎
+                            </span>
+
+                            <strong>
+                                5 Worlds
+                            </strong>
+
+                            <small>
+                                Mixed vocabulary
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                🏆
+                            </span>
+
+                            <strong>
+                                High Scores
+                            </strong>
+
+                            <small>
+                                Saved locally
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="games-hero-visual reveal">
+
+
+                    <div class="games-hero-blob"></div>
+
+
+                    <div class="game-float float-controller">
+
+                        🎮
+
+                        <span>
+                            Play!
+                        </span>
+
+                    </div>
+
+
+                    <div class="game-float float-star">
+
+                        ⭐
+
+                        <span>
+                            Stars
+                        </span>
+
+                    </div>
+
+
+                    <div class="game-float float-trophy">
+
+                        🏆
+
+                        <span>
+                            Win!
+                        </span>
+
+                    </div>
+
+
+                    <img
+                        src="assets/mascot/cappy.png"
+                        alt="Cappy bermain game"
+                        class="games-cappy"
+                    >
+
+
+                    <div class="games-talk">
+
+                        Game time! 🎮
+
+                        <strong>
+                            Can you beat your score?
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             PLAYER STATS
+        ======================================================= -->
+
+        <section class="player-stats-section">
+
+            <div class="container">
+
+
+                <div class="player-stats-card reveal">
+
+
+                    <div class="player-stat">
+
+                        <span>
+                            🧩
+                        </span>
+
+                        <div>
+
+                            <small>
+                                PICTURE GUESS
+                            </small>
+
+                            <strong id="pictureBestDisplay">
+                                0 / 10
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="player-stat">
+
+                        <span>
+                            🔗
+                        </span>
+
+                        <div>
+
+                            <small>
+                                WORD MATCH
+                            </small>
+
+                            <strong id="matchBestDisplay">
+                                0 / 5
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="player-stat">
+
+                        <span>
+                            ⚡
+                        </span>
+
+                        <div>
+
+                            <small>
+                                SPEED BEST
+                            </small>
+
+                            <strong id="speedBestDisplay">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="player-stat total-stars">
+
+                        <span>
+                            ⭐
+                        </span>
+
+                        <div>
+
+                            <small>
+                                TOTAL STARS
+                            </small>
+
+                            <strong id="gameStarsDisplay">
+                                120
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             GAME ARCADE
+        ======================================================= -->
+
+        <section
+            class="game-arcade"
+            id="gameArcade"
+        >
+
+            <div class="container">
+
+
+                <div class="games-section-heading reveal">
+
+                    <span class="section-badge">
+                        🕹️ Game Arcade
+                    </span>
+
+
+                    <h2>
+                        Choose your challenge.
+                    </h2>
+
+
+                    <p>
+
+                        Masing-masing game melatih kemampuan
+                        Bahasa Inggris dengan cara yang berbeda.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="game-mode-grid">
+
+
+                    <!-- PICTURE GUESS -->
+
+                    <a
+                        href="#pictureGame"
+                        class="game-mode-card picture-mode reveal"
+                    >
+
+                        <div class="game-mode-icon">
+                            🧩
+                        </div>
+
+
+                        <span>
+                            GAME 01
+                        </span>
+
+
+                        <h3>
+                            Picture Guess
+                        </h3>
+
+
+                        <p>
+
+                            Lihat gambar dan pilih
+                            kata Bahasa Inggris yang benar.
+
+                        </p>
+
+
+                        <div class="game-tags">
+
+                            <span>
+                                10 Questions
+                            </span>
+
+                            <span>
+                                Easy
+                            </span>
+
+                        </div>
+
+
+                        <strong class="game-mode-button">
+                            Play Game →
+                        </strong>
+
+                    </a>
+
+
+
+                    <!-- WORD MATCH -->
+
+                    <a
+                        href="#wordMatchGame"
+                        class="game-mode-card match-mode reveal"
+                    >
+
+                        <div class="game-mode-icon">
+                            🔗
+                        </div>
+
+
+                        <span>
+                            GAME 02
+                        </span>
+
+
+                        <h3>
+                            Word Match
+                        </h3>
+
+
+                        <p>
+
+                            Cocokkan kata Bahasa Inggris
+                            dengan arti Bahasa Indonesianya.
+
+                        </p>
+
+
+                        <div class="game-tags">
+
+                            <span>
+                                5 Pairs
+                            </span>
+
+                            <span>
+                                Memory
+                            </span>
+
+                        </div>
+
+
+                        <strong class="game-mode-button">
+                            Play Game →
+                        </strong>
+
+                    </a>
+
+
+
+                    <!-- SPEED -->
+
+                    <a
+                        href="#speedGame"
+                        class="game-mode-card speed-mode reveal"
+                    >
+
+                        <div class="game-mode-icon">
+                            ⚡
+                        </div>
+
+
+                        <span>
+                            GAME 03
+                        </span>
+
+
+                        <h3>
+                            Speed Challenge
+                        </h3>
+
+
+                        <p>
+
+                            Jawab sebanyak mungkin
+                            sebelum waktu habis.
+
+                        </p>
+
+
+                        <div class="game-tags">
+
+                            <span>
+                                30 Seconds
+                            </span>
+
+                            <span>
+                                Fast
+                            </span>
+
+                        </div>
+
+
+                        <strong class="game-mode-button">
+                            Play Game →
+                        </strong>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             PICTURE GUESS GAME
+        ======================================================= -->
+
+        <section
+            class="play-section picture-play-section"
+            id="pictureGame"
+        >
+
+            <div class="container">
+
+
+                <div class="games-section-heading center reveal">
+
+
+                    <span class="section-badge">
+                        🧩 Game 01
+                    </span>
+
+
+                    <h2>
+                        Picture Guess
+                    </h2>
+
+
+                    <p>
+
+                        Tebak nama gambar dalam Bahasa Inggris.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="game-board reveal">
+
+
+                    <!-- START -->
+
+                    <div
+                        class="game-start-screen"
+                        id="pictureStart"
+                    >
+
+                        <div class="start-game-icon">
+                            🧩
+                        </div>
+
+
+                        <span>
+                            PICTURE GUESS
+                        </span>
+
+
+                        <h3>
+                            Ready to guess?
+                        </h3>
+
+
+                        <p>
+                            10 pertanyaan dari semua Learning Worlds.
+                        </p>
+
+
+                        <button
+                            id="startPictureButton"
+                            type="button"
+                        >
+                            Start Picture Guess 🚀
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- GAME -->
+
+                    <div
+                        class="picture-game hidden"
+                        id="pictureGameArea"
+                    >
+
+
+                        <div class="game-top-bar">
+
+
+                            <div>
+
+                                <small>
+                                    QUESTION
+                                </small>
+
+                                <strong id="pictureCounter">
+                                    1 / 10
+                                </strong>
+
+                            </div>
+
+
+                            <div class="score-pill">
+
+                                ⭐
+
+                                <strong id="pictureScore">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div
+                            class="picture-category"
+                            id="pictureCategory"
+                        >
+                            Animals
+                        </div>
+
+
+
+                        <div
+                            class="picture-display"
+                            id="pictureDisplay"
+                        >
+                            🐱
+                        </div>
+
+
+
+                        <button
+                            type="button"
+                            class="game-listen-button"
+                            id="pictureListen"
+                        >
+                            🔊 Hear the word
+                        </button>
+
+
+
+                        <div
+                            class="picture-options"
+                            id="pictureOptions"
+                        >
+                        </div>
+
+
+
+                        <div
+                            class="game-feedback"
+                            id="pictureFeedback"
+                        >
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RESULT -->
+
+                    <div
+                        class="game-result hidden"
+                        id="pictureResult"
+                    >
+
+                        <div class="result-icon">
+                            🏆
+                        </div>
+
+
+                        <span>
+                            GAME COMPLETE
+                        </span>
+
+
+                        <h3>
+                            Picture Guess Complete!
+                        </h3>
+
+
+                        <p>
+                            Your score
+                        </p>
+
+
+                        <strong id="pictureFinalScore">
+                            0 / 10
+                        </strong>
+
+
+                        <div
+                            class="result-message"
+                            id="pictureResultMessage"
+                        >
+                        </div>
+
+
+                        <button
+                            id="restartPictureButton"
+                            type="button"
+                        >
+                            Play Again
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             WORD MATCH
+        ======================================================= -->
+
+        <section
+            class="play-section match-play-section"
+            id="wordMatchGame"
+        >
+
+            <div class="container">
+
+
+                <div class="games-section-heading center reveal">
+
+                    <span class="section-badge">
+                        🔗 Game 02
+                    </span>
+
+                    <h2>
+                        Word Match
+                    </h2>
+
+                    <p>
+
+                        Pilih kata English, lalu pilih
+                        arti Indonesianya yang sesuai.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="match-board reveal">
+
+
+                    <div class="match-top">
+
+
+                        <div>
+
+                            <small>
+                                MATCHED
+                            </small>
+
+                            <strong id="matchedCount">
+                                0 / 5
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="resetMatchButton"
+                        >
+                            ↻ New Words
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="match-help">
+
+                        Pilih satu kata di kiri, lalu cocokkan
+                        dengan arti di kanan.
+
+                    </div>
+
+
+
+                    <div class="match-columns">
+
+
+                        <div>
+
+
+                            <span class="match-column-title">
+                                🇺🇸 ENGLISH
+                            </span>
+
+
+                            <div
+                                class="match-list"
+                                id="englishMatchList"
+                            >
+                            </div>
+
+                        </div>
+
+
+
+                        <div>
+
+
+                            <span class="match-column-title">
+                                🇮🇩 INDONESIA
+                            </span>
+
+
+                            <div
+                                class="match-list"
+                                id="indonesiaMatchList"
+                            >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="match-feedback"
+                        id="matchFeedback"
+                    >
+
+                        Choose an English word 👆
+
+                    </div>
+
+
+
+                    <div
+                        class="match-complete hidden"
+                        id="matchComplete"
+                    >
+
+                        🎉 Excellent! You matched all 5 words!
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             SPEED CHALLENGE
+        ======================================================= -->
+
+        <section
+            class="play-section speed-play-section"
+            id="speedGame"
+        >
+
+            <div class="container">
+
+
+                <div class="games-section-heading center light reveal">
+
+
+                    <span class="section-badge">
+                        ⚡ Game 03
+                    </span>
+
+
+                    <h2>
+                        Speed Challenge
+                    </h2>
+
+
+                    <p>
+
+                        Kamu punya 30 detik.
+                        Jawab sebanyak mungkin!
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="speed-board reveal">
+
+
+                    <!-- START -->
+
+                    <div
+                        class="speed-start"
+                        id="speedStart"
+                    >
+
+                        <div class="speed-start-icon">
+                            ⚡
+                        </div>
+
+
+                        <span>
+                            30 SECOND CHALLENGE
+                        </span>
+
+
+                        <h3>
+                            How fast can you answer?
+                        </h3>
+
+
+                        <p>
+
+                            Setiap jawaban benar menambah skor.
+
+                        </p>
+
+
+                        <button
+                            id="startSpeedButton"
+                            type="button"
+                        >
+                            Start 30 Seconds ⚡
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- GAME -->
+
+                    <div
+                        class="speed-game hidden"
+                        id="speedGameArea"
+                    >
+
+
+                        <div class="speed-header">
+
+
+                            <div class="timer-box">
+
+                                <small>
+                                    TIME
+                                </small>
+
+                                <strong id="speedTimer">
+                                    30
+                                </strong>
+
+                            </div>
+
+
+                            <div class="speed-score-box">
+
+                                <small>
+                                    SCORE
+                                </small>
+
+                                <strong id="speedScore">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div
+                            class="speed-category"
+                            id="speedCategory"
+                        >
+                            🦁 Animals
+                        </div>
+
+
+
+                        <div
+                            class="speed-question"
+                            id="speedQuestion"
+                        >
+                            What is "Kucing" in English?
+                        </div>
+
+
+
+                        <div
+                            class="speed-options"
+                            id="speedOptions"
+                        >
+                        </div>
+
+
+
+                        <div
+                            class="speed-feedback"
+                            id="speedFeedback"
+                        >
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RESULT -->
+
+                    <div
+                        class="speed-result hidden"
+                        id="speedResult"
+                    >
+
+                        <div class="speed-result-icon">
+                            ⏰
+                        </div>
+
+
+                        <span>
+                            TIME'S UP!
+                        </span>
+
+
+                        <h3>
+                            Great speed!
+                        </h3>
+
+
+                        <p>
+                            You answered
+                        </p>
+
+
+                        <strong id="speedFinalScore">
+                            0
+                        </strong>
+
+
+                        <small>
+                            questions correctly
+                        </small>
+
+
+                        <button
+                            id="restartSpeedButton"
+                            type="button"
+                        >
+                            Try Again ⚡
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================================
+             BOTTOM CTA
+        ======================================================= -->
+
+        <section class="games-bottom-section">
+
+            <div class="container">
+
+
+                <div class="games-bottom-card reveal">
+
+
+                    <div>
+
+
+                        <span>
+                            🏆 KEEP LEARNING
+                        </span>
+
+
+                        <h2>
+                            Want a better score?
+                        </h2>
+
+
+                        <p>
+
+                            Pelajari kembali vocabulary yang
+                            belum kamu kuasai lalu kembali
+                            ke Game Arcade.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="games-bottom-actions">
+
+
+                        <a
+                            href="learn.html"
+                            class="secondary-button"
+                        >
+                            📚 Review Words
+                        </a>
+
+
+                        <a
+                            href="practice.html"
+                            class="primary-button"
+                        >
+                            🎯 Practice More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+
+                    <a
+                        href="index.html"
+                        class="brand"
+                    >
+
+                        <div class="brand-icon">
+                            <span>C</span>
+                        </div>
+
+
+                        <div class="brand-text">
+
+                            <strong>
+                                CapyLearn
+                            </strong>
+
+                            <small>
+                                Play • Learn • Speak!
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                    <p>
+
+                        Belajar Bahasa Inggris melalui
+                        visual, audio, latihan dan permainan
+                        bersama Cappy.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Games
+                    </h4>
+
+
+                    <a href="#pictureGame">
+                        Picture Guess
+                    </a>
+
+
+                    <a href="#wordMatchGame">
+                        Word Match
+                    </a>
+
+
+                    <a href="#speedGame">
+                        Speed Challenge
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Explore
+                    </h4>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="learn.html">
+                        Learn
+                    </a>
+
+
+                    <a href="practice.html">
+                        Practice
+                    </a>
+
+
+                    <a href="games.html">
+                        Games
+                    </a>
+
+
+                    <a href="progress.html">
+                        Progress
+                    </a>
+
+
+                    
+                    <a href="creator.html">
+                        Creator
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+</div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 CapyLearn. Play, Learn, Speak!
+                </p>
+
+                <p>
+                    Made with 💜 for little learners.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+
+        /* ======================================================
+           BASIC UI
+        ======================================================= */
+
+        const header =
+            document.getElementById(
+                "header"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                header.classList.toggle(
+                    "scrolled",
+                    window.scrollY > 30
+                );
+
+            }
+        );
+
+
+
+        const menuButton =
+            document.getElementById(
+                "menuButton"
+            );
+
+
+        const navMenu =
+            document.getElementById(
+                "navMenu"
+            );
+
+
+        menuButton.addEventListener(
+            "click",
+            () => {
+
+                navMenu.classList.toggle(
+                    "open"
+                );
+
+
+                menuButton.textContent =
+                    navMenu.classList.contains(
+                        "open"
+                    )
+                    ? "✕"
+                    : "☰";
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(
+                ".nav-link"
+            )
+            .forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        () => {
+
+                            navMenu.classList.remove(
+                                "open"
+                            );
+
+                            menuButton.textContent =
+                                "☰";
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* ======================================================
+           REVEAL
+        ======================================================= */
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.10
+                }
+
+            );
+
+
+        document
+            .querySelectorAll(
+                ".reveal"
+            )
+            .forEach(
+                item => {
+
+                    revealObserver.observe(
+                        item
+                    );
+
+                }
+            );
+
+
+
+        /* ======================================================
+           HELPERS
+        ======================================================= */
+
+        function shuffleArray(array) {
+
+
+            const copy =
+                [...array];
+
+
+            for (
+                let i =
+                    copy.length - 1;
+
+                i > 0;
+
+                i--
+            ) {
+
+
+                const j =
+                    Math.floor(
+                        Math.random()
+                        * (
+                            i + 1
+                        )
+                    );
+
+
+                [
+                    copy[i],
+                    copy[j]
+                ]
+                =
+                [
+                    copy[j],
+                    copy[i]
+                ];
+
+            }
+
+
+            return copy;
+
+        }
+
+
+
+        function speakWord(word) {
+
+
+            if (
+                !(
+                    "speechSynthesis"
+                    in window
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            window.speechSynthesis.cancel();
+
+
+            const speech =
+                new SpeechSynthesisUtterance(
+                    word
+                );
+
+
+            speech.lang =
+                "en-US";
+
+            speech.rate =
+                0.78;
+
+            speech.pitch =
+                1.05;
+
+
+            window.speechSynthesis.speak(
+                speech
+            );
+
+        }
+
+
+
+        /* ======================================================
+           VOCABULARY DATABASE
+        ======================================================= */
+
+        const vocabulary = [
+
+            {
+                category: "🦁 Animals",
+                image: "🐱",
+                english: "Cat",
+                indonesia: "Kucing"
+            },
+
+            {
+                category: "🦁 Animals",
+                image: "🐶",
+                english: "Dog",
+                indonesia: "Anjing"
+            },
+
+            {
+                category: "🦁 Animals",
+                image: "🦁",
+                english: "Lion",
+                indonesia: "Singa"
+            },
+
+            {
+                category: "🦁 Animals",
+                image: "🐘",
+                english: "Elephant",
+                indonesia: "Gajah"
+            },
+
+            {
+                category: "🦁 Animals",
+                image: "🐯",
+                english: "Tiger",
+                indonesia: "Harimau"
+            },
+
+            {
+                category: "🍎 Fruits",
+                image: "🍎",
+                english: "Apple",
+                indonesia: "Apel"
+            },
+
+            {
+                category: "🍎 Fruits",
+                image: "🍌",
+                english: "Banana",
+                indonesia: "Pisang"
+            },
+
+            {
+                category: "🍎 Fruits",
+                image: "🍊",
+                english: "Orange",
+                indonesia: "Jeruk"
+            },
+
+            {
+                category: "🍎 Fruits",
+                image: "🥭",
+                english: "Mango",
+                indonesia: "Mangga"
+            },
+
+            {
+                category: "🍎 Fruits",
+                image: "🍓",
+                english: "Strawberry",
+                indonesia: "Stroberi"
+            },
+
+            {
+                category: "🌱 Plants",
+                image: "🌳",
+                english: "Tree",
+                indonesia: "Pohon"
+            },
+
+            {
+                category: "🌱 Plants",
+                image: "🌸",
+                english: "Flower",
+                indonesia: "Bunga"
+            },
+
+            {
+                category: "🌱 Plants",
+                image: "🍃",
+                english: "Leaf",
+                indonesia: "Daun"
+            },
+
+            {
+                category: "🌱 Plants",
+                image: "🌵",
+                english: "Cactus",
+                indonesia: "Kaktus"
+            },
+
+            {
+                category: "🌱 Plants",
+                image: "🌻",
+                english: "Sunflower",
+                indonesia: "Bunga Matahari"
+            },
+
+            {
+                category: "🎨 Colors",
+                image: "🔴",
+                english: "Red",
+                indonesia: "Merah"
+            },
+
+            {
+                category: "🎨 Colors",
+                image: "🔵",
+                english: "Blue",
+                indonesia: "Biru"
+            },
+
+            {
+                category: "🎨 Colors",
+                image: "🟡",
+                english: "Yellow",
+                indonesia: "Kuning"
+            },
+
+            {
+                category: "🎨 Colors",
+                image: "🟢",
+                english: "Green",
+                indonesia: "Hijau"
+            },
+
+            {
+                category: "🎨 Colors",
+                image: "🟣",
+                english: "Purple",
+                indonesia: "Ungu"
+            },
+
+            {
+                category: "🔢 Numbers",
+                image: "1️⃣",
+                english: "One",
+                indonesia: "Satu"
+            },
+
+            {
+                category: "🔢 Numbers",
+                image: "2️⃣",
+                english: "Two",
+                indonesia: "Dua"
+            },
+
+            {
+                category: "🔢 Numbers",
+                image: "3️⃣",
+                english: "Three",
+                indonesia: "Tiga"
+            },
+
+            {
+                category: "🔢 Numbers",
+                image: "5️⃣",
+                english: "Five",
+                indonesia: "Lima"
+            },
+
+            {
+                category: "🔢 Numbers",
+                image: "🔟",
+                english: "Ten",
+                indonesia: "Sepuluh"
+            }
+
+        ];
+
+
+
+        /* ======================================================
+           GAME STATS
+        ======================================================= */
+
+        function getNumberStorage(
+            key
+        ) {
+
+
+            return Number(
+                localStorage.getItem(
+                    key
+                )
+            )
+            || 0;
+
+        }
+
+
+
+        function updateGameStats() {
+
+
+            const pictureBest =
+                getNumberStorage(
+                    "capylearnPictureBest"
+                );
+
+
+            const matchBest =
+                getNumberStorage(
+                    "capylearnMatchBest"
+                );
+
+
+            const speedBest =
+                getNumberStorage(
+                    "capylearnSpeedBest"
+                );
+
+
+            document
+                .getElementById(
+                    "pictureBestDisplay"
+                )
+                .textContent =
+                pictureBest
+                + " / 10";
+
+
+            document
+                .getElementById(
+                    "matchBestDisplay"
+                )
+                .textContent =
+                matchBest
+                + " / 5";
+
+
+            document
+                .getElementById(
+                    "speedBestDisplay"
+                )
+                .textContent =
+                speedBest;
+
+
+            let learnedTotal =
+                0;
+
+
+            [
+                "capylearnAnimalsLearned",
+                "capylearnFruitsLearned",
+                "capylearnPlantsLearned",
+                "capylearnColorsLearned",
+                "capylearnNumbersLearned"
+            ]
+            .forEach(
+                key => {
+
+                    try {
+
+                        const data =
+                            JSON.parse(
+                                localStorage.getItem(
+                                    key
+                                )
+                            );
+
+
+                        if (
+                            Array.isArray(
+                                data
+                            )
+                        ) {
+
+                            learnedTotal +=
+                                Math.min(
+                                    data.length,
+                                    10
+                                );
+
+                        }
+
+                    } catch (
+                        error
+                    ) {
+
+                    }
+
+                }
+            );
+
+
+            const gameBonus =
+                pictureBest
+                + matchBest
+                + speedBest;
+
+
+            const totalStars =
+                getCapyGlobalStars();
+
+
+            updateCapyGlobalStars();
+
+
+            document
+                .getElementById(
+                    "gameStarsDisplay"
+                )
+                .textContent =
+                totalStars;
+
+        }
+
+
+        updateGameStats();
+
+
+
+        /* ======================================================
+           PICTURE GUESS
+        ======================================================= */
+
+        let pictureQuestions =
+            [];
+
+
+        let pictureIndex =
+            0;
+
+
+        let pictureScore =
+            0;
+
+
+        let pictureLocked =
+            false;
+
+
+
+        const pictureStart =
+            document.getElementById(
+                "pictureStart"
+            );
+
+
+        const pictureGameArea =
+            document.getElementById(
+                "pictureGameArea"
+            );
+
+
+        const pictureResult =
+            document.getElementById(
+                "pictureResult"
+            );
+
+
+        const pictureCounter =
+            document.getElementById(
+                "pictureCounter"
+            );
+
+
+        const pictureScoreElement =
+            document.getElementById(
+                "pictureScore"
+            );
+
+
+        const pictureCategory =
+            document.getElementById(
+                "pictureCategory"
+            );
+
+
+        const pictureDisplay =
+            document.getElementById(
+                "pictureDisplay"
+            );
+
+
+        const pictureOptions =
+            document.getElementById(
+                "pictureOptions"
+            );
+
+
+        const pictureFeedback =
+            document.getElementById(
+                "pictureFeedback"
+            );
+
+
+        const pictureListen =
+            document.getElementById(
+                "pictureListen"
+            );
+
+
+
+        function createPictureQuestions() {
+
+
+            const selected =
+                shuffleArray(
+                    vocabulary
+                )
+                .slice(
+                    0,
+                    10
+                );
+
+
+            return selected.map(
+                item => {
+
+
+                    const wrongAnswers =
+                        shuffleArray(
+                            vocabulary.filter(
+                                word =>
+                                    word.english
+                                    !==
+                                    item.english
+                            )
+                        )
+                        .slice(
+                            0,
+                            3
+                        )
+                        .map(
+                            word =>
+                                word.english
+                        );
+
+
+                    return {
+
+                        ...item,
+
+                        options:
+                            shuffleArray(
+                                [
+                                    item.english,
+                                    ...wrongAnswers
+                                ]
+                            )
+
+                    };
+
+                }
+            );
+
+        }
+
+
+
+        function startPictureGame() {
+
+
+            pictureQuestions =
+                createPictureQuestions();
+
+
+            pictureIndex =
+                0;
+
+
+            pictureScore =
+                0;
+
+
+            pictureStart.classList.add(
+                "hidden"
+            );
+
+
+            pictureResult.classList.add(
+                "hidden"
+            );
+
+
+            pictureGameArea.classList.remove(
+                "hidden"
+            );
+
+
+            loadPictureQuestion();
+
+        }
+
+
+
+        function loadPictureQuestion() {
+
+
+            pictureLocked =
+                false;
+
+
+            pictureFeedback.textContent =
+                "";
+
+
+            const item =
+                pictureQuestions[
+                    pictureIndex
+                ];
+
+
+            pictureCounter.textContent =
+                (
+                    pictureIndex + 1
+                )
+                + " / 10";
+
+
+            pictureScoreElement.textContent =
+                pictureScore;
+
+
+            pictureCategory.textContent =
+                item.category;
+
+
+            pictureDisplay.textContent =
+                item.image;
+
+
+            pictureOptions.innerHTML =
+                "";
+
+
+            item.options.forEach(
+                option => {
+
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    button.type =
+                        "button";
+
+
+                    button.className =
+                        "picture-option";
+
+
+                    button.textContent =
+                        option;
+
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+
+                            if (
+                                pictureLocked
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            pictureLocked =
+                                true;
+
+
+                            if (
+                                option ===
+                                item.english
+                            ) {
+
+
+                                pictureScore++;
+
+
+                                button.classList.add(
+                                    "correct"
+                                );
+
+
+                                pictureFeedback.textContent =
+                                    "🎉 Correct!";
+
+
+                            } else {
+
+
+                                button.classList.add(
+                                    "wrong"
+                                );
+
+
+                                pictureFeedback.textContent =
+                                    "💜 Nice try! Correct answer: "
+                                    + item.english;
+
+
+                                [
+                                    ...pictureOptions.children
+                                ]
+                                .forEach(
+                                    answer => {
+
+                                        if (
+                                            answer.textContent
+                                            ===
+                                            item.english
+                                        ) {
+
+                                            answer.classList.add(
+                                                "correct"
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+                            }
+
+
+                            pictureScoreElement.textContent =
+                                pictureScore;
+
+
+                            setTimeout(
+                                () => {
+
+
+                                    pictureIndex++;
+
+
+                                    if (
+                                        pictureIndex >=
+                                        pictureQuestions.length
+                                    ) {
+
+                                        finishPictureGame();
+
+                                    } else {
+
+                                        loadPictureQuestion();
+
+                                    }
+
+                                },
+                                900
+                            );
+
+                        }
+                    );
+
+
+                    pictureOptions.appendChild(
+                        button
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        pictureListen.addEventListener(
+            "click",
+            () => {
+
+
+                const item =
+                    pictureQuestions[
+                        pictureIndex
+                    ];
+
+
+                if (
+                    item
+                ) {
+
+                    speakWord(
+                        item.english
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        function finishPictureGame() {
+
+
+            pictureGameArea.classList.add(
+                "hidden"
+            );
+
+
+            pictureResult.classList.remove(
+                "hidden"
+            );
+
+
+            document
+                .getElementById(
+                    "pictureFinalScore"
+                )
+                .textContent =
+                pictureScore
+                + " / 10";
+
+
+            let message;
+
+
+            if (
+                pictureScore === 10
+            ) {
+
+                message =
+                    "🌟 Perfect score! Amazing!";
+
+            } else if (
+                pictureScore >= 8
+            ) {
+
+                message =
+                    "🎉 Excellent! Almost perfect!";
+
+            } else if (
+                pictureScore >= 6
+            ) {
+
+                message =
+                    "💜 Great work! Keep practicing!";
+
+            } else {
+
+                message =
+                    "🐾 Good try! Review your words and play again.";
+
+            }
+
+
+            document
+                .getElementById(
+                    "pictureResultMessage"
+                )
+                .textContent =
+                message;
+
+
+            const oldBest =
+                getNumberStorage(
+                    "capylearnPictureBest"
+                );
+
+
+            if (
+                pictureScore >
+                oldBest
+            ) {
+
+                localStorage.setItem(
+                    "capylearnPictureBest",
+                    pictureScore
+                );
+
+            }
+
+
+            updateGameStats();
+
+        }
+
+
+
+        document
+            .getElementById(
+                "startPictureButton"
+            )
+            .addEventListener(
+                "click",
+                startPictureGame
+            );
+
+
+        document
+            .getElementById(
+                "restartPictureButton"
+            )
+            .addEventListener(
+                "click",
+                startPictureGame
+            );
+
+
+
+        /* ======================================================
+           WORD MATCH
+        ======================================================= */
+
+        let currentPairs =
+            [];
+
+
+        let selectedEnglish =
+            null;
+
+
+        let matchedPairs =
+            0;
+
+
+
+        const englishMatchList =
+            document.getElementById(
+                "englishMatchList"
+            );
+
+
+        const indonesiaMatchList =
+            document.getElementById(
+                "indonesiaMatchList"
+            );
+
+
+        const matchFeedback =
+            document.getElementById(
+                "matchFeedback"
+            );
+
+
+        const matchedCount =
+            document.getElementById(
+                "matchedCount"
+            );
+
+
+        const matchComplete =
+            document.getElementById(
+                "matchComplete"
+            );
+
+
+
+        function loadMatchGame() {
+
+
+            currentPairs =
+                shuffleArray(
+                    vocabulary
+                )
+                .slice(
+                    0,
+                    5
+                );
+
+
+            selectedEnglish =
+                null;
+
+
+            matchedPairs =
+                0;
+
+
+            matchedCount.textContent =
+                "0 / 5";
+
+
+            matchFeedback.textContent =
+                "Choose an English word 👆";
+
+
+            matchComplete.classList.add(
+                "hidden"
+            );
+
+
+            englishMatchList.innerHTML =
+                "";
+
+
+            indonesiaMatchList.innerHTML =
+                "";
+
+
+            currentPairs.forEach(
+                item => {
+
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    button.type =
+                        "button";
+
+
+                    button.className =
+                        "match-word english-word";
+
+
+                    button.dataset.word =
+                        item.english;
+
+
+                    button.textContent =
+                        item.english;
+
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+
+                            if (
+                                button.classList.contains(
+                                    "matched"
+                                )
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            document
+                                .querySelectorAll(
+                                    ".english-word"
+                                )
+                                .forEach(
+                                    btn => {
+
+                                        btn.classList.remove(
+                                            "selected"
+                                        );
+
+                                    }
+                                );
+
+
+                            selectedEnglish =
+                                item;
+
+
+                            button.classList.add(
+                                "selected"
+                            );
+
+
+                            matchFeedback.textContent =
+                                "Now choose the Indonesian meaning 👉";
+
+                        }
+                    );
+
+
+                    englishMatchList.appendChild(
+                        button
+                    );
+
+                }
+            );
+
+
+
+            shuffleArray(
+                currentPairs
+            )
+            .forEach(
+                item => {
+
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    button.type =
+                        "button";
+
+
+                    button.className =
+                        "match-word indonesia-word";
+
+
+                    button.dataset.english =
+                        item.english;
+
+
+                    button.textContent =
+                        item.indonesia;
+
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+
+                            if (
+                                button.classList.contains(
+                                    "matched"
+                                )
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            if (
+                                !selectedEnglish
+                            ) {
+
+                                matchFeedback.textContent =
+                                    "👈 Choose an English word first.";
+
+                                return;
+
+                            }
+
+
+                            if (
+                                button.dataset.english
+                                ===
+                                selectedEnglish.english
+                            ) {
+
+
+                                const englishButton =
+                                    document.querySelector(
+                                        '.english-word[data-word="'
+                                        +
+                                        selectedEnglish.english
+                                        +
+                                        '"]'
+                                    );
+
+
+                                englishButton.classList.remove(
+                                    "selected"
+                                );
+
+
+                                englishButton.classList.add(
+                                    "matched"
+                                );
+
+
+                                button.classList.add(
+                                    "matched"
+                                );
+
+
+                                matchedPairs++;
+
+
+                                matchedCount.textContent =
+                                    matchedPairs
+                                    + " / 5";
+
+
+                                matchFeedback.textContent =
+                                    "🎉 Perfect match!";
+
+
+                                selectedEnglish =
+                                    null;
+
+
+                                if (
+                                    matchedPairs === 5
+                                ) {
+
+                                    finishMatchGame();
+
+                                }
+
+
+                            } else {
+
+
+                                button.classList.add(
+                                    "wrong"
+                                );
+
+
+                                matchFeedback.textContent =
+                                    "💜 Not quite. Try another meaning.";
+
+
+                                setTimeout(
+                                    () => {
+
+                                        button.classList.remove(
+                                            "wrong"
+                                        );
+
+                                    },
+                                    650
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+                    indonesiaMatchList.appendChild(
+                        button
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        function finishMatchGame() {
+
+
+            matchComplete.classList.remove(
+                "hidden"
+            );
+
+
+            matchFeedback.textContent =
+                "";
+
+
+            const oldBest =
+                getNumberStorage(
+                    "capylearnMatchBest"
+                );
+
+
+            if (
+                5 >
+                oldBest
+            ) {
+
+                localStorage.setItem(
+                    "capylearnMatchBest",
+                    5
+                );
+
+            }
+
+
+            updateGameStats();
+
+        }
+
+
+
+        document
+            .getElementById(
+                "resetMatchButton"
+            )
+            .addEventListener(
+                "click",
+                loadMatchGame
+            );
+
+
+        loadMatchGame();
+
+
+
+        /* ======================================================
+           SPEED CHALLENGE
+        ======================================================= */
+
+        let speedScore =
+            0;
+
+
+        let speedTime =
+            30;
+
+
+        let speedCurrent =
+            null;
+
+
+        let speedRunning =
+            false;
+
+
+        let speedTimerInterval =
+            null;
+
+
+
+        const speedStart =
+            document.getElementById(
+                "speedStart"
+            );
+
+
+        const speedGameArea =
+            document.getElementById(
+                "speedGameArea"
+            );
+
+
+        const speedResult =
+            document.getElementById(
+                "speedResult"
+            );
+
+
+        const speedTimer =
+            document.getElementById(
+                "speedTimer"
+            );
+
+
+        const speedScoreElement =
+            document.getElementById(
+                "speedScore"
+            );
+
+
+        const speedCategory =
+            document.getElementById(
+                "speedCategory"
+            );
+
+
+        const speedQuestion =
+            document.getElementById(
+                "speedQuestion"
+            );
+
+
+        const speedOptions =
+            document.getElementById(
+                "speedOptions"
+            );
+
+
+        const speedFeedback =
+            document.getElementById(
+                "speedFeedback"
+            );
+
+
+
+        function startSpeedGame() {
+
+
+            if (
+                speedTimerInterval
+            ) {
+
+                clearInterval(
+                    speedTimerInterval
+                );
+
+            }
+
+
+            speedScore =
+                0;
+
+
+            speedTime =
+                30;
+
+
+            speedRunning =
+                true;
+
+
+            speedTimer.textContent =
+                speedTime;
+
+
+            speedScoreElement.textContent =
+                speedScore;
+
+
+            speedStart.classList.add(
+                "hidden"
+            );
+
+
+            speedResult.classList.add(
+                "hidden"
+            );
+
+
+            speedGameArea.classList.remove(
+                "hidden"
+            );
+
+
+            loadSpeedQuestion();
+
+
+            speedTimerInterval =
+                setInterval(
+                    () => {
+
+
+                        speedTime--;
+
+
+                        speedTimer.textContent =
+                            speedTime;
+
+
+                        if (
+                            speedTime <= 10
+                        ) {
+
+                            speedTimer.classList.add(
+                                "danger"
+                            );
+
+                        }
+
+
+                        if (
+                            speedTime <= 0
+                        ) {
+
+                            finishSpeedGame();
+
+                        }
+
+                    },
+                    1000
+                );
+
+        }
+
+
+
+        function loadSpeedQuestion() {
+
+
+            if (
+                !speedRunning
+            ) {
+
+                return;
+
+            }
+
+
+            speedFeedback.textContent =
+                "";
+
+
+            speedCurrent =
+                vocabulary[
+                    Math.floor(
+                        Math.random()
+                        *
+                        vocabulary.length
+                    )
+                ];
+
+
+            speedCategory.textContent =
+                speedCurrent.category;
+
+
+            speedQuestion.textContent =
+                'What is "'
+                +
+                speedCurrent.indonesia
+                +
+                '" in English?';
+
+
+            const wrongAnswers =
+                shuffleArray(
+                    vocabulary.filter(
+                        item =>
+                            item.english
+                            !==
+                            speedCurrent.english
+                    )
+                )
+                .slice(
+                    0,
+                    3
+                )
+                .map(
+                    item =>
+                        item.english
+                );
+
+
+            const answers =
+                shuffleArray(
+                    [
+                        speedCurrent.english,
+                        ...wrongAnswers
+                    ]
+                );
+
+
+            speedOptions.innerHTML =
+                "";
+
+
+            answers.forEach(
+                answer => {
+
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    button.type =
+                        "button";
+
+
+                    button.className =
+                        "speed-option";
+
+
+                    button.textContent =
+                        answer;
+
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+
+                            if (
+                                !speedRunning
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            if (
+                                answer ===
+                                speedCurrent.english
+                            ) {
+
+
+                                speedScore++;
+
+
+                                speedScoreElement.textContent =
+                                    speedScore;
+
+
+                                speedFeedback.textContent =
+                                    "✓ Correct!";
+
+
+                                speedFeedback.className =
+                                    "speed-feedback correct-text";
+
+
+                            } else {
+
+
+                                speedFeedback.textContent =
+                                    "✕ "
+                                    + speedCurrent.english;
+
+
+                                speedFeedback.className =
+                                    "speed-feedback wrong-text";
+
+                            }
+
+
+                            setTimeout(
+                                () => {
+
+                                    loadSpeedQuestion();
+
+                                },
+                                220
+                            );
+
+                        }
+                    );
+
+
+                    speedOptions.appendChild(
+                        button
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        function finishSpeedGame() {
+
+
+            speedRunning =
+                false;
+
+
+            clearInterval(
+                speedTimerInterval
+            );
+
+
+            speedTimerInterval =
+                null;
+
+
+            speedTimer.classList.remove(
+                "danger"
+            );
+
+
+            speedGameArea.classList.add(
+                "hidden"
+            );
+
+
+            speedResult.classList.remove(
+                "hidden"
+            );
+
+
+            document
+                .getElementById(
+                    "speedFinalScore"
+                )
+                .textContent =
+                speedScore;
+
+
+            const oldBest =
+                getNumberStorage(
+                    "capylearnSpeedBest"
+                );
+
+
+            if (
+                speedScore >
+                oldBest
+            ) {
+
+                localStorage.setItem(
+                    "capylearnSpeedBest",
+                    speedScore
+                );
+
+            }
+
+
+            updateGameStats();
+
+        }
+
+
+
+        document
+            .getElementById(
+                "startSpeedButton"
+            )
+            .addEventListener(
+                "click",
+                startSpeedGame
+            );
+
+
+        document
+            .getElementById(
+                "restartSpeedButton"
+            )
+            .addEventListener(
+                "click",
+                startSpeedGame
+            );
+
+
+        window.addEventListener(
+            "pageshow",
+            updateGameStats
+        );
+
+
+    
+        /* ======================================================
+           GLOBAL STAR TOTAL — CONSISTENT ACROSS ALL PAGES
+        ======================================================= */
+
+        function capySafeArrayLength(key) {
+            try {
+                const value = JSON.parse(
+                    localStorage.getItem(key)
+                );
+
+                return Array.isArray(value)
+                    ? Math.min(value.length, 10)
+                    : 0;
+
+            } catch (error) {
+                return 0;
+            }
+        }
+
+
+        function capySafeScore(key, maxValue = null) {
+            const raw =
+                Number(
+                    localStorage.getItem(key)
+                );
+
+            const value =
+                Number.isFinite(raw)
+                    ? Math.max(0, raw)
+                    : 0;
+
+            return maxValue === null
+                ? value
+                : Math.min(value, maxValue);
+        }
+
+
+        function getCapyGlobalStars() {
+            const learnedTotal =
+                capySafeArrayLength("capylearnAnimalsLearned")
+                + capySafeArrayLength("capylearnFruitsLearned")
+                + capySafeArrayLength("capylearnPlantsLearned")
+                + capySafeArrayLength("capylearnColorsLearned")
+                + capySafeArrayLength("capylearnNumbersLearned");
+
+            const mixedBest =
+                capySafeScore(
+                    "capylearnMixedPracticeBest",
+                    10
+                );
+
+            const pictureBest =
+                capySafeScore(
+                    "capylearnPictureBest",
+                    10
+                );
+
+            const matchBest =
+                capySafeScore(
+                    "capylearnMatchBest",
+                    5
+                );
+
+            const speedBest =
+                capySafeScore(
+                    "capylearnSpeedBest"
+                );
+
+            return 120
+                + (learnedTotal * 10)
+                + mixedBest
+                + pictureBest
+                + matchBest
+                + speedBest;
+        }
+
+
+        function updateCapyGlobalStars() {
+            const starElement =
+                document.getElementById(
+                    "starCount"
+                );
+
+            if (starElement) {
+                starElement.textContent =
+                    getCapyGlobalStars();
+            }
+        }
+
+
+
+        updateCapyGlobalStars();
+
+        window.addEventListener(
+            "pageshow",
+            updateCapyGlobalStars
+        );
+
+        window.addEventListener(
+            "storage",
+            updateCapyGlobalStars
+        );
+
+</script>
+
+
+    <script src="v2.js"></script>
+
+
+    <script src="profiles-v4.js"></script>
+    <script src="engagement.js"></script>
+    <script src="pwa.js"></script>
+
+</body>
+
+</html>

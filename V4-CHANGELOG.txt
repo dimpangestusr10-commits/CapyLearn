@@ -1,0 +1,39 @@
+CAPYLEARN V4 — MULTI PROFILE + PWA
+====================================
+
+MULTI-PROFILE
+- Each learner now has a separate saved progress snapshot.
+- Creating a new learner starts fresh:
+  • 120 base stars
+  • 0 learned words
+  • 0 XP/activity progress
+  • no practice/game scores
+  • no achievements/daily mission progress
+- Switching back to an existing learner restores that learner's previous progress.
+- Renaming/changing avatar keeps that same profile's progress.
+- Profiles use stable internal IDs, so display-name changes never break progress.
+- Profile manager supports create, switch, edit, and delete.
+- Existing V3/shared progress is automatically migrated into the first learner profile.
+- Existing page code continues using the legacy CapyLearn keys transparently; V4 snapshots synchronize them per active profile.
+
+EXAMPLE
+- Cyra has 340 stars / 620 XP.
+- Create Hairul -> Hairul starts fresh at 120 base stars and fresh progress.
+- Switch back to Cyra -> Cyra returns to 340 stars / 620 XP and all prior words/scores/achievements.
+
+PWA
+- Added manifest.webmanifest.
+- Added 192x192 and 512x512 app icons.
+- Added service-worker.js with conservative static caching.
+- Added Install CapyLearn prompt/button when supported.
+- Service worker does NOT register under file://, so local testing remains safe.
+- For installability, serve the project via HTTPS or localhost.
+
+New files:
+- profiles-v4.js
+- profiles-v4.css
+- manifest.webmanifest
+- service-worker.js
+- pwa.js
+- assets/icons/icon-192.png
+- assets/icons/icon-512.png
