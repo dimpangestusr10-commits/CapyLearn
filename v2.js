@@ -2,6 +2,7 @@
 (() => {
   'use strict';
 
+  const mobilePerf = matchMedia('(max-width: 900px), (hover: none), (pointer: coarse)').matches;
   const body = document.body;
   if (!body) return;
 
@@ -22,7 +23,7 @@
   window.addEventListener('scroll', syncScroll, {passive:true});
 
   // Ambient cursor light on precise pointers only
-  if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (!mobilePerf && matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     body.classList.add('v2-pointer');
     const spot = document.createElement('div');
     spot.className = 'v2-spotlight';
@@ -55,7 +56,7 @@
     el.style.setProperty('--v2-delay', `${Math.min((i%5)*55,220)}ms`);
   });
 
-  if ('IntersectionObserver' in window) {
+  if (!mobilePerf && 'IntersectionObserver' in window) {
     const ro = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -79,7 +80,7 @@
     .filter((el,i,a)=>a.indexOf(el)===i);
   cards.forEach(el => el.classList.add('v2-card'));
 
-  if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (!mobilePerf && matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     cards.forEach(card => {
       card.addEventListener('pointermove', e => {
         const r = card.getBoundingClientRect();
@@ -110,7 +111,7 @@
   const hero = document.querySelector(
     '.hero,.learn-hero,.practice-hero,.games-hero,.progress-hero,.creator-hero,.animal-hero,.fruit-hero,.plant-hero,.color-hero,.number-hero'
   );
-  if (hero && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (hero && !mobilePerf && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const field = document.createElement('div');
     field.className='v2-particle-field';
     const palette = ['rgba(123,110,246,.75)','rgba(103,200,255,.72)','rgba(255,215,106,.72)','rgba(120,225,176,.65)','rgba(255,154,132,.62)'];
@@ -129,7 +130,7 @@
   }
 
   // Magnetic buttons
-  if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (!mobilePerf && matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('.primary-button,.nav-button,.instagram-button').forEach(btn => {
       btn.classList.add('v2-magnetic');
       btn.addEventListener('pointermove', e => {
@@ -147,7 +148,7 @@
   const numericStats = statCandidates.filter(el => /^\d+$/.test(el.textContent.trim()));
   const animateNumber = el => {
     const end = Number(el.textContent.trim());
-    if (!Number.isFinite(end) || end < 2 || el.dataset.v2Counted) return;
+    if (mobilePerf || !Number.isFinite(end) || end < 2 || el.dataset.v2Counted) return;
     el.dataset.v2Counted='1';
     const start=performance.now(), dur=900;
     const tick = now => {
@@ -158,7 +159,7 @@
     };
     requestAnimationFrame(tick);
   };
-  if ('IntersectionObserver' in window) {
+  if (!mobilePerf && 'IntersectionObserver' in window) {
     const no = new IntersectionObserver(entries => entries.forEach(e => {
       if (e.isIntersecting) { animateNumber(e.target); no.unobserve(e.target); }
     }), {threshold:.5});
@@ -175,7 +176,8 @@
     if (!href.includes('.html')) return;
     e.preventDefault();
     body.classList.add('v2-leave');
-    setTimeout(()=>location.href=href, 360);
+    if (mobilePerf) location.href=href;
+    else setTimeout(()=>location.href=href, 360);
   });
 
 

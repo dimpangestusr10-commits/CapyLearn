@@ -1,4 +1,4 @@
-const CACHE = "capylearn-v4-20261014";
+const CACHE = "capylearn-v4-mobile-20261024-1";
 const CORE = [
   "./",
   "./index.html",
@@ -15,6 +15,10 @@ const CORE = [
   "./games.html",
   "./progress.html",
   "./creator.html",
+  "./creator.css",
+  "./assets/creator/dimas-pangestu.png",
+  "./pwa.js",
+  "./manifest.webmanifest",
   "./animals.html",
   "./fruits.html",
   "./plants.html",
@@ -36,7 +40,7 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => k.startsWith("capylearn-") && k !== CACHE).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });

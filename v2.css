@@ -433,3 +433,44 @@ section:target .v2-reveal,
   transform: none !important;
   filter: none !important;
 }
+
+/* Mobile rendering budget: static decoration, opaque surfaces, no blur passes.
+   Applies equally in a browser and when installed on the home screen. */
+@media (max-width:900px), (hover:none), (pointer:coarse) {
+  html {scroll-behavior:auto!important;}
+  body::before,.bg-blob,.v2-spotlight,.v2-particle-field,.cv2-particles,
+  .v2-page-veil,.star-counter::after,.v2-card::after,
+  .cv2-glow-card::after,.dedication-shell::after {display:none!important;}
+  body *,body *::before,body *::after {
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    filter:none!important;
+  }
+  .header,.header .navbar,.header.scrolled .navbar,
+  body.v2-scrolled .header .navbar,.nav-menu {background:#fffdf9!important;}
+  .creator-eyebrow,.creator-mini-stats>div,.creator-portrait-card,
+  .floating-chip,.identity-card,.dedication-quote {background:#fffdfa!important;}
+  .v2-float,.floating-chip,.creator-orbit,.bg-blob,
+  .mascot,.hero img,.learn-hero img,.animal-hero img,.fruit-hero img,
+  .plant-hero img,.color-hero img,.number-hero img {
+    animation:none!important;translate:none!important;
+  }
+  body.v2-enter,body.v2-leave {animation:none!important;}
+  .reveal,.v2-reveal,.v2-reveal.v2-visible,
+  .creator-v2.cv2-motion .creator-page .reveal,.cv2-entrance {
+    opacity:1!important;transform:none!important;
+    animation:none!important;transition:none!important;
+  }
+  .creator-portrait-card,.story-card,.identity-card,.principles-card,
+  .vision-copy,.vision-quote,.dedication-shell,.dedication-quote,
+  .contact-card,.world-card,.category-card,.game-card,.stat-card,.progress-card {
+    box-shadow:0 5px 18px rgba(67,57,128,.08)!important;
+    transition:none!important;
+  }
+  .creator-v2 .cv2-dialog {box-shadow:none;}
+  .cv2-dialog::backdrop {backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(28,20,47,.75);}
+  .cv2-dialog[open] {animation:none!important;}
+  .cv2-letter-paper {box-shadow:none;}
+  .creator-v2 .creator-hero::before {background:radial-gradient(ellipse at 80% 20%,#eee8ff,transparent 65%);}
+  .creator-v2 .primary-button,.creator-v2 .creator-portrait-card,.creator-v2 .floating-chip {translate:none!important;}
+}

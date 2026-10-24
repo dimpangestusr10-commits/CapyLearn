@@ -38,11 +38,6 @@
         href="style.css"
     >
 
-    <link
-        rel="stylesheet"
-        href="creator.css"
-    >
-
     <link rel="stylesheet" href="v2.css">
 
 
@@ -56,10 +51,11 @@
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
     <link rel="stylesheet" href="profiles-v4.css">
 
+<link rel="stylesheet" href="creator.css">
 </head>
 
 
-<body>
+<body class="creator-v2">
 
 
     <div class="page-bg">
@@ -277,7 +273,8 @@
                     </div>
 
 
-                    <div class="creator-mini-stats">
+                    <button type="button" class="creator-profile-link" data-open="creatorProfile" aria-haspopup="dialog" aria-controls="creatorProfile">Meet the creator <span aria-hidden="true">↗</span></button>
+<div class="creator-mini-stats">
 
                         <div>
 
@@ -343,14 +340,14 @@
                         </div>
 
 
-                        <div class="portrait-frame">
+                        <button class="portrait-frame creator-profile-trigger" type="button" data-open="creatorProfile" aria-haspopup="dialog" aria-controls="creatorProfile" aria-label="Buka profil Dimas Pangestu, S.M.">
 
                             <img
                                 src="assets/creator/dimas-pangestu.png"
                                 alt="Dimas Pangestu, S.M."
                             >
 
-                        </div>
+                        </button>
 
 
                         <div class="portrait-meta">
@@ -362,7 +359,7 @@
                                 </small>
 
                                 <strong>
-                                    Dimas Pangestu, S.M.
+                                    <button type="button" class="creator-name">Dimas Pangestu, S.M.</button>
                                 </strong>
 
                             </div>
@@ -420,7 +417,7 @@
 
 
                         <h2>
-                            Dimas Pangestu, S.M.
+                            <button type="button" class="creator-name">Dimas Pangestu, S.M.</button>
                         </h2>
 
 
@@ -792,6 +789,7 @@
                     </div>
 
 
+<div class="letter-action"><span class="letter-caption">A memory, kept for tomorrow</span><button class="primary-button letter-button" type="button" data-open="cyraLetter" aria-haspopup="dialog" aria-controls="cyraLetter">Open a letter for Cyra <span aria-hidden="true">♥</span></button></div>
                     <div class="dedication-signature">
 
                         <p>
@@ -1201,6 +1199,40 @@
 
 
 
+
+    <dialog id="creatorProfile" class="cv2-dialog cv2-profile" aria-labelledby="creatorProfileTitle" aria-describedby="creatorProfileRole">
+      <div class="cv2-modal-surface">
+        <button type="button" class="cv2-close" data-close aria-label="Tutup profil creator" autofocus>×</button>
+        <div class="cv2-profile-grid">
+          <div class="cv2-profile-photo"><img src="assets/creator/dimas-pangestu.png" alt="Potret Dimas Pangestu, S.M." width="854" height="1281"></div>
+          <div class="cv2-profile-copy">
+            <p class="cv2-kicker">THE PERSON BEHIND THE PURPOSE</p>
+            <h2 id="creatorProfileTitle"><button type="button" class="creator-name">Dimas Pangestu, S.M.</button></h2>
+            <p id="creatorProfileRole">Founder • Creator • Digital Builder • Independent Trader</p>
+            <dl class="cv2-bio"><div><dt>Origin</dt><dd>Anambas<span>Desa Ladan, Kecamatan Palmatak, Kepulauan Riau</span></dd></div><div><dt>Born</dt><dd><time datetime="2001-10-22">22 October 2001</time></dd></div></dl>
+            <blockquote>“Building ideas into meaningful experiences.”</blockquote>
+            <a class="primary-button" href="https://www.instagram.com/heyjudee14_/" target="_blank" rel="noopener noreferrer">Instagram @heyjudee14_ ↗</a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="cyraLetter" class="cv2-dialog cv2-letter" aria-labelledby="cyraLetterTitle">
+      <div class="cv2-modal-surface">
+        <button type="button" class="cv2-close" data-close aria-label="Tutup surat untuk Cyra" autofocus>×</button>
+        <article class="cv2-letter-paper">
+          <p class="cv2-kicker">A LITTLE PIECE OF TODAY, FOR YOU</p>
+          <span class="cv2-letter-seal" aria-hidden="true">♥</span>
+          <h2 id="cyraLetterTitle" tabindex="-1">Dear Cyra,</h2>
+          <p>suatu hari jika kamu membaca ini, mungkin CapyLearn sudah jauh berbeda dari saat ayah pertama kali membuatnya. Tapi satu hal yang ayah harap tidak pernah berubah: rasa ingin tahumu, keberanianmu untuk belajar, dan keyakinan bahwa kamu juga bisa menciptakan sesuatu dari idemu sendiri.</p>
+          <p>Ayah membuat karya ini bukan karena semuanya sudah sempurna, tetapi karena ayah ingin meninggalkan satu bukti kecil bahwa memulai selalu lebih penting daripada menunggu sempurna.</p>
+          <p>Semoga suatu hari CapyLearn bisa menemanimu belajar, dan halaman ini mengingatkanmu bahwa sejak awal, ada bagian dari karya ini yang dibuat untukmu.</p>
+          <p class="cv2-letter-sign">Dengan cinta,<br><strong>Ayah.</strong></p>
+          <div class="cv2-letter-foot"><span>For Cyra Hana Azzahwa</span><span aria-hidden="true">✦</span></div>
+        </article>
+      </div>
+    </dialog>
+    <div class="cv2-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
     <script>
 
 
@@ -1275,56 +1307,6 @@
                                 "☰";
 
                         }
-                    );
-
-                }
-            );
-
-
-
-        const revealObserver =
-            new IntersectionObserver(
-
-                entries => {
-
-                    entries.forEach(
-                        entry => {
-
-                            if (
-                                entry.isIntersecting
-                            ) {
-
-                                entry.target.classList.add(
-                                    "visible"
-                                );
-
-                                revealObserver.unobserve(
-                                    entry.target
-                                );
-
-                            }
-
-                        }
-                    );
-
-                },
-
-                {
-                    threshold: 0.10
-                }
-
-            );
-
-
-        document
-            .querySelectorAll(
-                ".reveal"
-            )
-            .forEach(
-                item => {
-
-                    revealObserver.observe(
-                        item
                     );
 
                 }
@@ -1460,13 +1442,204 @@
     </script>
 
 
-    <script src="v2.js"></script>
+    <!-- Creator V2 supplies the motion layer for this page. -->
 
 
     <script src="profiles-v4.js"></script>
     <script src="engagement.js"></script>
     <script src="pwa.js"></script>
 
+<script>
+/* Creator V2: scoped, event-driven interactions. No progress data is written. */
+(() => {
+  'use strict';
+  const body = document.body;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  const compact = matchMedia('(max-width: 900px), (hover: none), (pointer: coarse)');
+  const hero = document.querySelector('.creator-hero');
+  body.dataset.v2Page = 'creator';
+
+  // Native dialogs provide focus containment, inert background and Escape handling.
+  let opener = null;
+  let lockedY = 0;
+  let oldBodyStyle = null;
+  const dialogs = [...document.querySelectorAll('.cv2-dialog')];
+  function openModal(dialog, trigger) {
+    if (dialogs.some(d => d.open)) return;
+    opener = trigger;
+    lockedY = window.scrollY;
+    oldBodyStyle = body.getAttribute('style');
+    const gutter = innerWidth - document.documentElement.clientWidth;
+    body.style.position = 'fixed';
+    body.style.top = `-${lockedY}px`;
+    body.style.width = '100%';
+    body.style.overflow = 'hidden';
+    body.style.paddingRight = `${gutter}px`;
+    dialog.showModal();
+    dialog.appendChild(document.querySelector('.cv2-toast'));
+    dialog.scrollTop = 0;
+    if (dialog.id === 'cyraLetter') dialog.querySelector('h2').focus({preventScroll:true});
+  }
+  document.querySelectorAll('[data-open]').forEach(trigger => {
+    trigger.addEventListener('click', () => openModal(document.getElementById(trigger.dataset.open), trigger));
+  });
+  dialogs.forEach(dialog => {
+    dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
+    let startedOutside = false;
+    const outside = e => {
+      const r = dialog.getBoundingClientRect();
+      return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    };
+    dialog.addEventListener('pointerdown', e => { startedOutside = outside(e); });
+    dialog.addEventListener('click', e => { if (startedOutside && outside(e)) dialog.close(); startedOutside = false; });
+    dialog.addEventListener('close', () => {
+      body.appendChild(document.querySelector('.cv2-toast'));
+      if (oldBodyStyle === null) body.removeAttribute('style');
+      else body.setAttribute('style', oldBodyStyle);
+      const html = document.documentElement;
+      const oldScroll = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      window.scrollTo(0, lockedY);
+      html.style.scrollBehavior = oldScroll;
+      opener?.focus({preventScroll:true});
+    });
+  });
+
+  const menuButton = document.getElementById('menuButton');
+  const menu = document.getElementById('navMenu');
+  menuButton.setAttribute('aria-controls','navMenu');
+  menuButton.setAttribute('aria-expanded','false');
+  const syncMenu = () => {
+    menuButton.setAttribute('aria-expanded', String(menu.classList.contains('open')));
+    menuButton.setAttribute('aria-label', menu.classList.contains('open') ? 'Tutup menu' : 'Buka menu');
+  };
+  new MutationObserver(syncMenu).observe(menu,{attributes:true,attributeFilter:['class']});
+
+  // Progressive enhancement: content stays visible if script or observer support fails.
+  const reveals = [...document.querySelectorAll('.creator-page .reveal')];
+  document.querySelectorAll('.story-grid, .vision-grid').forEach(group => {
+    [...group.children].forEach((el,i) => el.style.setProperty('--cv2-delay', `${i*95}ms`));
+  });
+  const heroItems = [...document.querySelectorAll('.creator-hero-copy > *, .creator-portrait-wrap')];
+  heroItems.forEach((el,i) => {
+    el.classList.add('cv2-entrance');
+    el.style.setProperty('--cv2-entrance-delay', `${Math.min(i*95,540)}ms`);
+  });
+  if ('IntersectionObserver' in window && !reduced.matches && !compact.matches) {
+    body.classList.add('cv2-motion');
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), {threshold:0.08});
+    reveals.forEach(el => observer.observe(el));
+  } else reveals.forEach(el => el.classList.add('visible'));
+
+  // Stats animate once, with final values retained for assistive technology.
+  const counts = [...document.querySelectorAll('.project-stats strong')];
+  const counterFrames = new Map();
+  counts.forEach(el => {
+    el.dataset.final = el.textContent.trim();
+    el.parentElement.setAttribute('aria-label', `${el.dataset.final} ${el.nextElementSibling.textContent.trim()}`);
+    el.setAttribute('aria-hidden','true');
+  });
+  function animateCount(el) {
+    if (reduced.matches || compact.matches) return;
+    const final = Number(el.dataset.final), start = performance.now();
+    function tick(now) {
+      const t = Math.min((now-start)/1250,1);
+      el.textContent = Math.floor(final*(1-Math.pow(1-t,3)));
+      if (t<1 && !reduced.matches) counterFrames.set(el,requestAnimationFrame(tick));
+      else { el.textContent = String(final); counterFrames.delete(el); }
+    }
+    counterFrames.set(el,requestAnimationFrame(tick));
+  }
+  if ('IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { animateCount(entry.target); counterObserver.unobserve(entry.target); }
+    }),{threshold:0.5});
+    counts.forEach(el => counterObserver.observe(el));
+  }
+
+  const particleField = document.createElement('div');
+  particleField.className = 'cv2-particles'; particleField.setAttribute('aria-hidden','true');
+  ['✦','·','·','🐾','·','✧','·','·'].forEach((mark,i) => {
+    const p = document.createElement('span'); p.textContent = mark;
+    p.style.cssText = `left:${6+(i*29)%88}%;top:${10+(i*17)%77}%;--particle-delay:-${i*1.4}s;--particle-duration:${9+i%3*2}s`;
+    particleField.appendChild(p);
+  });
+  if (!compact.matches && !reduced.matches) hero.prepend(particleField);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => hero.classList.toggle('cv2-in-view',entry.isIntersecting)).observe(hero);
+  }
+
+  // Single scheduled frame per pointer event burst; no permanent animation loop.
+  const portrait = document.querySelector('.creator-portrait-card');
+  const chips = [...document.querySelectorAll('.floating-chip')];
+  let pendingHeroFrame = 0;
+  const resetHero = () => {
+    cancelAnimationFrame(pendingHeroFrame); pendingHeroFrame = 0;
+    hero.style.removeProperty('--hero-x'); hero.style.removeProperty('--hero-y');
+    [portrait,...chips].forEach(el => el.style.removeProperty('translate'));
+  };
+  hero.addEventListener('pointermove', e => {
+    if (reduced.matches || compact.matches || !fine.matches || pendingHeroFrame) return;
+    const x = e.clientX, y = e.clientY;
+    pendingHeroFrame = requestAnimationFrame(() => {
+      pendingHeroFrame = 0;
+      const r = hero.getBoundingClientRect();
+      const px = (x-r.left)/r.width, py = (y-r.top)/r.height;
+      hero.style.setProperty('--hero-x',`${px*100}%`); hero.style.setProperty('--hero-y',`${py*100}%`);
+      portrait.style.translate = `${(px-.5)*12}px ${(py-.5)*10}px`;
+      chips.forEach((chip,i) => { chip.style.translate = `${(px-.5)*(-10-i*5)}px ${(py-.5)*(-8-i*4)}px`; });
+    });
+  },{passive:true});
+  hero.addEventListener('pointerleave',resetHero);
+
+  document.querySelectorAll('.story-card, .identity-card, .principles-card, .vision-copy, .project-stats > div, .contact-card').forEach(card => {
+    card.classList.add('cv2-glow-card');
+    let frame = 0;
+    card.addEventListener('pointermove', e => {
+      if (reduced.matches || compact.matches || !fine.matches || frame) return;
+      const x=e.clientX,y=e.clientY;
+      frame=requestAnimationFrame(() => {
+        frame=0; const r=card.getBoundingClientRect();
+        card.style.setProperty('--glow-x',`${x-r.left}px`); card.style.setProperty('--glow-y',`${y-r.top}px`);
+      });
+    },{passive:true});
+    card.addEventListener('pointerleave', () => {cancelAnimationFrame(frame);frame=0;});
+  });
+  const magnets = [...document.querySelectorAll('.primary-button')];
+  magnets.forEach(button => {
+    button.addEventListener('pointermove', e => {
+      if (reduced.matches || compact.matches || !fine.matches) return;
+      const r=button.getBoundingClientRect();
+      button.style.translate=`${(e.clientX-r.left-r.width/2)*.075}px ${(e.clientY-r.top-r.height/2)*.12}px`;
+    },{passive:true});
+    button.addEventListener('pointerleave', () => button.style.removeProperty('translate'));
+    button.addEventListener('blur', () => button.style.removeProperty('translate'));
+  });
+  const stopMotion = () => {
+    if (!reduced.matches) return;
+    resetHero(); magnets.forEach(el=>el.style.removeProperty('translate'));
+    counterFrames.forEach((id,el)=>{cancelAnimationFrame(id);el.textContent=el.dataset.final;});
+    counterFrames.clear(); reveals.forEach(el=>el.classList.add('visible'));
+  };
+  reduced.addEventListener('change',stopMotion);
+  fine.addEventListener('change', () => {resetHero();magnets.forEach(el=>el.style.removeProperty('translate'));});
+
+  let clicks=0, resetTimer, toastTimer;
+  const toast=document.querySelector('.cv2-toast');
+  document.querySelectorAll('.creator-name').forEach(name=>name.addEventListener('click',()=>{
+    clearTimeout(resetTimer); clicks++;
+    resetTimer=setTimeout(()=>{clicks=0;},5000);
+    if (clicks<5) return;
+    clicks=0; clearTimeout(toastTimer);
+    toast.textContent='Built with purpose ✦'; toast.classList.add('show');
+    toastTimer=setTimeout(()=>{toast.classList.remove('show');toast.textContent='';},2800);
+  }));
+})();
+
+</script>
 </body>
 
 </html>
